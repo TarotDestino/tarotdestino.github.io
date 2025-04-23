@@ -1,0 +1,25 @@
+/project
+├── index.html
+├── about.html
+├── services.html
+├── tarot.html
+├── runes.html
+├── blog.html
+├── testimonials.html
+├── contact.html
+├── styles.css
+├── script.js
+├── images
+│   ├── cards
+│   │   ├── reverse_card.jpg
+│   │   ├── card_0.png
+│   │   ...
+│   │   └── card_77.png
+│   ├── runes
+│   │   ├── reverse_rune.png
+│   │   ├── rune_0.png
+│   │   ...
+│   │   └── rune_23.png
+│   └── blog
+│       ├── runas.jpg
+│       ├── luna_nueva.jpg

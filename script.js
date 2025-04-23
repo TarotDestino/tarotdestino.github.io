@@ -80,177 +80,235 @@ const tarotCards = [
     { name: "Rey de Oros", meaning: "Éxito, riqueza y liderazgo práctico.", image: "images/cards/card_77.png" }
 ];
 
-// Array of 24 Elder Futhark Runes with Symbols, Meanings, and Predictions
+// Array of 24 Elder Futhark Runes with Symbols, Meanings, and Predictions in Spanish
 const runes = [
-    { name: "Fehu", symbol: "ᚠ", meaning: "Riqueza, prosperidad, éxito material.", prediction: "Expect financial growth but manage resources wisely.", image: "images/runes/rune_0.png" },
-    { name: "Uruz", symbol: "ᚢ", meaning: "Fuerza, salud, energía vital.", prediction: "Your resilience will lead to overcoming challenges.", image: "images/runes/rune_1.png" },
-    { name: "Thurisaz", symbol: "ᚦ", meaning: "Protección, conflicto, poder.", prediction: "Stand firm; a challenge may test your boundaries.", image: "images/runes/rune_2.png" },
-    { name: "Ansuz", symbol: "ᚨ", meaning: "Comunicación, sabiduría, inspiración.", prediction: "Listen to inner wisdom for clear guidance.", image: "images/runes/rune_3.png" },
-    { name: "Raidho", symbol: "ᚱ", meaning: "Viaje, movimiento, dirección.", prediction: "A journey, physical or spiritual, awaits you.", image: "images/runes/rune_4.png" },
-    { name: "Kenaz", symbol: "ᚲ", meaning: "Creativity, iluminación, transformación.", prediction: "Your creative spark will light the way forward.", image: "images/runes/rune_5.png" },
-    { name: "Gebo", symbol: "ᚷ", meaning: "Asociación, generosidad, equilibrio.", prediction: "A partnership will bring mutual benefits.", image: "images/runes/rune_6.png" },
-    { name: "Wunjo", symbol: "ᚹ", meaning: "Alegría, armonía, satisfacción.", prediction: "Happiness and peace are within reach.", image: "images/runes/rune_7.png" },
-    { name: "Hagalaz", symbol: "ᚺ", meaning: "Cambio, disrupción, liberación.", prediction: "Embrace unexpected change for growth.", image: "images/runes/rune_8.png" },
-    { name: "Nauthiz", symbol: "ᚾ", meaning: "Necesidad, resistencia, superación.", prediction: "Face challenges with determination to succeed.", image: "images/runes/rune_9.png" },
-    { name: "Isa", symbol: "ᛁ", meaning: "Pausa, introspección, estancamiento.", prediction: "Take time to reflect before acting.", image: "images/runes/rune_10.png" },
-    { name: "Jera", symbol: "ᛃ", meaning: "Cosecha, ciclos, recompensa.", prediction: "Patience will yield fruitful results.", image: "images/runes/rune_11.png" },
-    { name: "Eihwaz", symbol: "ᛇ", meaning: "Estabilidad, conexión espiritual, resistencia.", prediction: "Trust your inner strength to endure.", image: "images/runes/rune_12.png" },
-    { name: "Perthro", symbol: "ᛈ", meaning: "Destino, misterio, cambio oculto.", prediction: "Embrace the unknown; fate is at work.", image: "images/runes/rune_13.png" },
-    { name: "Algiz", symbol: "ᛉ", meaning: "Protección, guía, conexión divina.", prediction: "You are shielded; trust your instincts.", image: "images/runes/rune_14.png" },
-    { name: "Sowilo", symbol: "ᛋ", meaning: "Éxito, vitalidad, claridad.", prediction: "Victory and clarity will light your path.", image: "images/runes/rune_15.png" },
-    { name: "Tiwaz", symbol: "ᛏ", meaning: "Justicia, liderazgo, sacrificio.", prediction: "Act with honor to achieve your goals.", image: "images/runes/rune_16.png" },
-    { name: "Berkano", symbol: "ᛒ", meaning: "Crecimiento, fertilidad, renacimiento.", prediction: "New beginnings will blossom soon.", image: "images/runes/rune_17.png" },
-    { name: "Ehwaz", symbol: "ᛖ", meaning: "Colaboración, movimiento, confianza.", prediction: "Teamwork will propel you forward.", image: "images/runes/rune_18.png" },
-    { name: "Mannaz", symbol: "ᛗ", meaning: "Humanidad, comunidad, autoconocimiento.", prediction: "Seek balance within yourself and others.", image: "images/runes/rune_19.png" },
-    { name: "Laguz", symbol: "ᛚ", meaning: "Intuición, emociones, fluidez.", prediction: "Trust your instincts to navigate challenges.", image: "images/runes/rune_20.png" },
-    { name: "Ingwaz", symbol: "ᛝ", meaning: "Fertilidad, potencial, finalización.", prediction: "Your efforts will soon bear fruit.", image: "images/runes/rune_21.png" },
-    { name: "Dagaz", symbol: "ᛞ", meaning: "Transformación, esperanza, claridad.", prediction: "A breakthrough will bring new light.", image: "images/runes/rune_22.png" },
-    { name: "Othala", symbol: "ᛟ", meaning: "Hogar, herencia, legado.", prediction: "Focus on family and roots for stability.", image: "images/runes/rune_23.png" }
+    { name: "Fehu", symbol: "ᚠ", meaning: "Riqueza, prosperidad, éxito material.", prediction: "Espera crecimiento financiero, pero gestiona tus recursos con cuidado.", image: "images/runes/rune_0.png" },
+    { name: "Uruz", symbol: "ᚢ", meaning: "Fuerza, salud, energía vital.", prediction: "Tu resistencia te llevará a superar desafíos.", image: "images/runes/rune_1.png" },
+    { name: "Thurisaz", symbol: "ᚦ", meaning: "Protección, conflicto, poder.", prediction: "Mantente firme; un desafío pondrá a prueba tus límites.", image: "images/runes/rune_2.png" },
+    { name: "Ansuz", symbol: "ᚨ", meaning: "Comunicación, sabiduría, inspiración.", prediction: "Escucha tu sabiduría interior para obtener claridad.", image: "images/runes/rune_3.png" },
+    { name: "Raidho", symbol: "ᚱ", meaning: "Viaje, movimiento, dirección.", prediction: "Un viaje, físico o espiritual, está por comenzar.", image: "images/runes/rune_4.png" },
+    { name: "Kenaz", symbol: "ᚲ", meaning: "Creatividad, iluminación, transformación.", prediction: "Tu chispa creativa iluminará el camino a seguir.", image: "images/runes/rune_5.png" },
+    { name: "Gebo", symbol: "ᚷ", meaning: "Asociación, generosidad, equilibrio.", prediction: "Una alianza traerá beneficios mutuos.", image: "images/runes/rune_6.png" },
+    { name: "Wunjo", symbol: "ᚹ", meaning: "Alegría, armonía, satisfacción.", prediction: "La felicidad y la paz están a tu alcance.", image: "images/runes/rune_7.png" },
+    { name: "Hagalaz", symbol: "hack: "ᚺ", meaning: "Cambio, disrupción, liberación.", prediction: "Acepta un cambio inesperado para crecer.", image: "images/runes/rune_8.png" },
+    { name: "Nauthiz", symbol: "ᚾ", meaning: "Necesidad, resistencia, superación.", prediction: "Enfrenta los retos con determinación para triunfar.", image: "images/runes/rune_9.png" },
+    { name: "Isa", symbol: "ᛁ", meaning: "Pausa, introspección, estancamiento.", prediction: "Tómate un tiempo para reflexionar antes de actuar.", image: "images/runes/rune_10.png" },
+    { name: "Jera", symbol: "ᛃ", meaning: "Cosecha, ciclos, recompensa.", prediction: "La paciencia dará frutos valiosos.", image: "images/runes/rune_11.png" },
+    { name: "Eihwaz", symbol: "ᛇ", meaning: "Estabilidad, conexión espiritual, resistencia.", prediction: "Confía en tu fuerza interior para perseverar.", image: "images/runes/rune_12.png" },
+    { name: "Perthro", symbol: "ᛈ", meaning: "Destino, misterio, cambio oculto.", prediction: "Abraza lo desconocido; el destino está en juego.", image: "images/runes/rune_13.png" },
+    { name: "Algiz", symbol: "ᛉ", meaning: "Protección, guía, conexión divina.", prediction: "Estás protegido; confía en tus instintos.", image: "images/runes/rune_14.png" },
+    { name: "Sowilo", symbol: "ᛋ", meaning: "Éxito, vitalidad, claridad.", prediction: "La victoria y la claridad iluminarán tu camino.", image: "images/runes/rune_15.png" },
+    { name: "Tiwaz", symbol: "ᛏ", meaning: "Justicia, liderazgo, sacrificio.", prediction: "Actúa con honor para alcanzar tus metas.", image: "images/runes/rune_16.png" },
+    { name: "Berkano", symbol: "ᛒ", meaning: "Crecimiento, fertilidad, renacimiento.", prediction: "Pronto florecerán nuevos comienzos.", image: "images/runes/rune_17.png" },
+    { name: "Ehwaz", symbol: "ᛖ", meaning: "Colaboración, movimiento, confianza.", prediction: "El trabajo en equipo te impulsará hacia adelante.", image: "images/runes/rune_18.png" },
+    { name: "Mannaz", symbol: "ᛗ", meaning: "Humanidad, comunidad, autoconocimiento.", prediction: "Busca el equilibrio contigo mismo y con otros.", image: "images/runes/rune_19.png" },
+    { name: "Laguz", symbol: "ᛚ", meaning: "Intuición, emociones, fluidez.", prediction: "Confía en tus instintos para superar desafíos.", image: "images/runes/rune_20.png" },
+    { name: "Ingwaz", symbol: "ᛝ", meaning: "Fertilidad, potencial, finalización.", prediction: "Tus esfuerzos pronto darán resultados.", image: "images/runes/rune_21.png" },
+    { name: "Dagaz", symbol: "ᛞ", meaning: "Transformación, esperanza, claridad.", prediction: "Un avance traerá nueva luz a tu vida.", image: "images/runes/rune_22.png" },
+    { name: "Othala", symbol: "ᛟ", meaning: "Hogar, herencia, legado.", prediction: "Concéntrate en la familia y tus raíces para encontrar estabilidad.", image: "images/runes/rune_23.png" }
 ];
 
 // Tarot Card Logic
-const tarotContainer = document.getElementById('tarot-cards');
-const tarotResult = document.getElementById('tarot-result');
-const resetTarotButton = document.getElementById('reset-tarot');
-let selectedTarotCards = [];
+function initTarot() {
+    const tarotContainer = document.getElementById('tarot-cards');
+    const tarotResult = document.getElementById('tarot-result');
+    const resetButton = document.getElementById('reset-tarot');
+    let selectedCards = [];
 
-function renderTarotCards() {
-    tarotContainer.innerHTML = '';
-    const shuffledCards = tarotCards.sort(() => Math.random() - 0.5).slice(0, 10);
-    shuffledCards.forEach((card, index) => {
-        const cardElement = document.createElement('div');
-        cardElement.classList.add('tarot-card');
-        cardElement.style.setProperty('--index', index);
-        cardElement.innerHTML = `
-            <div class="tarot-card-inner">
-                <div class="card-front"></div>
-                <div class="card-back" style="background-image: url('${card.image}');"></div>
-            </div>
-        `;
-        cardElement.addEventListener('click', () => selectTarotCard(card, cardElement));
-        tarotContainer.appendChild(cardElement);
-    });
-}
-
-function selectTarotCard(card, cardElement) {
-    if (selectedTarotCards.length < 3 && !selectedTarotCards.includes(card)) {
-        selectedTarotCards.push(card);
-        cardElement.classList.add('flipped');
-        tarotResult.innerHTML += `
-            <div>
-                <h3>${card.name}</h3>
-                <img src="${card.image}" alt="${card.name}" style="width: 140px; border-radius: 12px;">
-                <p>${card.meaning}</p>
-            </div>
-        `;
-        if (selectedTarotCards.length === 3) {
-            tarotContainer.querySelectorAll('.tarot-card').forEach(card => card.style.pointerEvents = 'none');
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
         }
+        return array;
     }
-}
 
-resetTarotButton.addEventListener('click', () => {
-    selectedTarotCards = [];
-    tarotResult.innerHTML = '';
-    renderTarotCards();
-    tarotContainer.querySelectorAll('.tarot-card').forEach(card => card.style.pointerEvents = 'auto');
-});
+    function displayTarotCards() {
+        tarotContainer.innerHTML = '';
+        selectedCards = [];
+        tarotResult.innerHTML = '';
+        const shuffledCards = shuffle([...tarotCards]).slice(0, 10);
+        shuffledCards.forEach((card, index) => {
+            const cardElement = document.createElement('div');
+            cardElement.classList.add('tarot-card');
+            cardElement.style.setProperty('--index', index);
+            cardElement.innerHTML = `
+                <div class="tarot-card-inner">
+                    <div class="card-front"></div>
+                    <div class="card-back" style="background-image: url('${card.image}')"></div>
+                </div>
+            `;
+            cardElement.addEventListener('click', () => {
+                if (!cardElement.classList.contains('flipped') && selectedCards.length < 3) {
+                    cardElement.classList.add('flipped');
+                    selectedCards.push(card);
+                    if (selectedCards.length === 3) {
+                        displayTarotResults();
+                        tarotContainer.querySelectorAll('.tarot-card:not(.flipped)').forEach(c => c.style.opacity = '0.3');
+                    }
+                }
+            });
+            tarotContainer.appendChild(cardElement);
+        });
+    }
+
+    function displayTarotResults() {
+        tarotResult.innerHTML = '';
+        selectedCards.forEach((card, index) => {
+            const resultDiv = document.createElement('div');
+            resultDiv.innerHTML = `
+                <h3>Carta ${index + 1}: ${card.name}</h3>
+                <img src="${card.image}" alt="${card.name}">
+                <p>${card.meaning}</p>
+            `;
+            tarotResult.appendChild(resultDiv);
+        });
+    }
+
+    resetButton.addEventListener('click', displayTarotCards);
+    displayTarotCards();
+}
 
 // Rune Logic
-const runeContainer = document.getElementById('rune-cards');
-const runeResult = document.getElementById('rune-result');
-const resetRunesButton = document.getElementById('reset-runes');
-let selectedRunes = [];
+function initRunes() {
+    const runeContainer = document.getElementById('rune-cards');
+    const runeResult = document.getElementById('rune-result');
+    const resetButton = document.getElementById('reset-runes');
+    let selectedRunes = [];
 
-function renderRunes() {
-    runeContainer.innerHTML = '';
-    const shuffledRunes = runes.sort(() => Math.random() - 0.5).slice(0, 10);
-    shuffledRunes.forEach((rune, index) => {
-        const runeElement = document.createElement('div');
-        runeElement.classList.add('rune-card');
-        runeElement.style.setProperty('--index', index);
-        runeElement.innerHTML = `
-            <div class="rune-card-inner">
-                <div class="card-front"></div>
-                <div class="card-back" style="background-image: url('${rune.image}');"></div>
-            </div>
-        `;
-        runeElement.addEventListener('click', () => selectRune(rune, runeElement));
-        runeContainer.appendChild(runeElement);
-    });
-}
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
 
-function selectRune(rune, runeElement) {
-    if (selectedRunes.length < 3 && !selectedRunes.includes(rune)) {
-        selectedRunes.push(rune);
-        runeElement.classList.add('flipped');
-        runeResult.innerHTML += `
-            <div>
-                <h3>${rune.name} (${rune.symbol})</h3>
-                <img src="${rune.image}" alt="${rune.name}" style="width: 100px; border-radius: 12px;">
+    function displayRunes() {
+        runeContainer.innerHTML = '';
+        selectedRunes = [];
+        runeResult.innerHTML = '';
+        const shuffledRunes = shuffle([...runes]).slice(0, 10);
+        shuffledRunes.forEach((rune, index) => {
+            const runeElement = document.createElement('div');
+            runeElement.classList.add('rune-card');
+            runeElement.style.setProperty('--index', index);
+            runeElement.innerHTML = `
+                <div class="rune-card-inner">
+                    <div class="card-front"></div>
+                    <div class="card-back" style="background-image: url('${rune.image}')"></div>
+                </div>
+            `;
+            runeElement.addEventListener('click', () => {
+                if (!runeElement.classList.contains('flipped') && selectedRunes.length < 3) {
+                    runeElement.classList.add('flipped');
+                    selectedRunes.push(rune);
+                    if (selectedRunes.length === 3) {
+                        displayRuneResults();
+                        runeContainer.querySelectorAll('.rune-card:not(.flipped)').forEach(c => c.style.opacity = '0.3');
+                    }
+                }
+            });
+            runeContainer.appendChild(runeElement);
+        });
+    }
+
+    function displayRuneResults() {
+        runeResult.innerHTML = '';
+        selectedRunes.forEach((rune, index) => {
+            const resultDiv = document.createElement('div');
+            resultDiv.innerHTML = `
+                <h3>Runa ${index + 1}: ${rune.name} (${rune.symbol})</h3>
+                <img src="${rune.image}" alt="${rune.name}">
                 <p><strong>Significado:</strong> ${rune.meaning}</p>
                 <p><strong>Predicción:</strong> ${rune.prediction}</p>
-            </div>
-        `;
-        if (selectedRunes.length === 3) {
-            runeContainer.querySelectorAll('.rune-card').forEach(rune => rune.style.pointerEvents = 'none');
-        }
+            `;
+            runeResult.appendChild(resultDiv);
+        });
+    }
+
+    resetButton.addEventListener('click', displayRunes);
+    displayRunes();
+}
+
+// Contact Form Submission
+function initContactForm() {
+    const submitButton = document.getElementById('submit-contact');
+    if (submitButton) {
+        submitButton.addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (name && email && message) {
+                alert('Mensaje enviado correctamente.');
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Por favor, completa todos los campos.');
+            }
+        });
     }
 }
 
-resetRunesButton.addEventListener('click', () => {
-    selectedRunes = [];
-    runeResult.innerHTML = '';
-    renderRunes();
-    runeContainer.querySelectorAll('.rune-card').forEach(rune => rune.style.pointerEvents = 'auto');
-});
-
-// Initial Render
-renderTarotCards();
-renderRunes();
+// Newsletter Subscription
+function initNewsletter() {
+    const submitButton = document.getElementById('submit-newsletter');
+    if (submitButton) {
+        submitButton.addEventListener('click', () => {
+            const email = document.getElementById('newsletter-email').value;
+            if (email) {
+                alert('¡Suscrito correctamente a la newsletter!');
+                document.getElementById('newsletter-email').value = '';
+            } else {
+                alert('Por favor, ingresa un email válido.');
+            }
+        });
+    }
+}
 
 // Chat Functionality
-const chatBox = document.getElementById('chat-box');
-document.getElementById('toggle-chat').addEventListener('click', () => {
-    chatBox.classList.toggle('active');
-});
-document.getElementById('send-chat').addEventListener('click', () => {
-    const message = document.getElementById('chat-message').value;
-    if (message) {
-        alert('Mensaje enviado: ' + message);
-        document.getElementById('chat-message').value = '';
+function initChat() {
+    const chatBox = document.getElementById('chat-box');
+    const toggleChat = document.getElementById('toggle-chat');
+    const sendChat = document.getElementById('send-chat');
+    if (chatBox && toggleChat && sendChat) {
+        toggleChat.addEventListener('click', () => {
+            chatBox.classList.toggle('active');
+        });
+        sendChat.addEventListener('click', () => {
+            const message = document.getElementById('chat-message').value;
+            if (message) {
+                alert('Mensaje enviado: ' + message);
+                document.getElementById('chat-message').value = '';
+            }
+        });
     }
-});
-
-// Contact Form Submission
-document.getElementById('submit-contact').addEventListener('click', () => {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    if (name && email && message) {
-        alert('Formulario enviado. ¡Gracias por tu mensaje!');
-    } else {
-        alert('Por favor, completa todos los campos.');
-    }
-});
-
-// Newsletter Subscription
-document.getElementById('submit-newsletter').addEventListener('click', () => {
-    const email = document.getElementById('newsletter-email').value;
-    if (email) {
-        alert('¡Suscrito correctamente a la newsletter!');
-    } else {
-        alert('Por favor, ingresa un email válido.');
-    }
-});
+}
 
 // Scroll Animation for Sections
-const sections = document.querySelectorAll('.animate-section');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-section');
-        }
-    });
-}, { threshold: 0.2 });
-sections.forEach(section => observer.observe(section));
+function initScrollAnimations() {
+    const sections = document.querySelectorAll('.animate-section');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-section');
+            }
+        });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+}
+
+// Initialize Functions Based on Page
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('tarot-cards')) {
+        initTarot();
+    }
+    if (document.getElementById('rune-cards')) {
+        initRunes();
+    }
+    initContactForm();
+    initNewsletter();
+    initChat();
+    initScrollAnimations();
+});

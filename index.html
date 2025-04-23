@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explora tu destino con tiradas de tarot y runas, consultas astrológicas, sanación con cristales y más. Servicios esotéricos profesionales.">
-    <meta name="keywords" content="tarot profesional, tirada de runas, astrología, sanación con cristales, tarot marsella, runas elder futhark">
+    <meta name="description" content="Conoce a la tarotista de Tarot Celestial, experta en Tarot de Marsella, runas Elder Futhark y astrología.">
+    <meta name="keywords" content="tarotista profesional, runología, astrología">
     <meta name="author" content="Tarot Celestial">
-    <title>Tarot Celestial - Tu Camino Iluminado</title>
+    <title>Tarot Celestial - Sobre Mí</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,177 +16,21 @@
         <h1>Tarot Celestial</h1>
     </header>
     <nav>
-        <a href="#home">Inicio</a>
-        <a href="#about">Sobre Mí</a>
-        <a href="#services">Servicios</a>
-        <a href="#tarot">Tirada de Tarot</a>
-        <a href="#runes">Tirada de Runas</a>
-        <a href="#blog">Blog</a>
-        <a href="#testimonials">Testimonios</a>
-        <a href="#contact">Contacto</a>
+        <a href="index.html">Inicio</a>
+        <a href="about.html">Sobre Mí</a>
+        <a href="services.html">Servicios</a>
+        <a href="tarot.html">Tirada de Tarot</a>
+        <a href="runes.html">Tirada de Runas</a>
+        <a href="blog.html">Blog</a>
+        <a href="testimonials.html">Testimonios</a>
+        <a href="contact.html">Contacto</a>
     </nav>
-    <div class="container">
-        <section id="home" class="hero animate-section">
-            <h2>Ilumina tu Destino con el Universo</h2>
-            <p>Descubre mensajes del cosmos a través de tarot, runas, astrología y sanación esotérica.</p>
-            <a href="#tarot" class="btn">Prueba una Tirada Gratis</a>
-        </section>
-
-        <section id="about" class="section animate-section">
+    <div class="container about-bg">
+        <section class="section animate-section">
             <h2>Sobre Mí</h2>
             <p>Soy una tarotista y esoterista certificada con 15 años de experiencia, especializada en Tarot de Marsella, runas Elder Futhark y astrología. Mi misión es guiarte con claridad y empatía en tu camino espiritual.</p>
             <p><strong>Certificados:</strong> Diplomada en Tarot Terapéutico (Escuela Esotérica de Barcelona), Runología (Academia Nórdica de Estudios Místicos).</p>
-        </section>
-
-        <section id="services" class="section animate-section">
-            <h2>Servicios</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Tirada de Amor</h3>
-                    <p>Explora el futuro de tus relaciones con una lectura personalizada de tarot.</p>
-                    <a href="#contact" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Sesión en Vivo</h3>
-                    <p>Consulta privada por videollamada o chat en tiempo real.</p>
-                    <a href="#contact" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Lectura Grabada</h3>
-                    <p>Recibe un video o audio con tu tirada personalizada.</p>
-                    <a href="#contact" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Club Exclusivo</h3>
-                    <p>Membresía con rituales, meditaciones guiadas y contenido premium.</p>
-                    <a href="#contact" class="btn">Suscribirse</a>
-                </div>
-                <div class="card">
-                    <h3>Lectura de Runas</h3>
-                    <p>Descubre mensajes ancestrales con una tirada de runas Elder Futhark.</p>
-                    <a href="#contact" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Consulta Astrológica</h3>
-                    <p>Carta natal, tránsitos o sinastría para entender tu camino cósmico.</p>
-                    <a href="#contact" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Sanación con Cristales</h3>
-                    <p>Equilibra tu energía con cristales seleccionados intuitivamente.</p>
-                    <a href="#contact" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Péndulo Divinatorio</h3>
-                    <p>Respuestas claras a tus preguntas con el arte del péndulo.</p>
-                    <a href="#contact" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Interpretación de Sueños</h3>
-                    <p>Descifra los mensajes ocultos en tus sueños para mayor claridad.</p>
-                    <a href="#contact" class="btn">Reservar</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="tarot" class="section animate-section">
-            <h2>Tirada de Tarot Online Gratis</h2>
-            <p>Elige 3 cartas del Tarot de Marsella y descubre su mensaje para ti.</p>
-            <div id="tarot-cards" class="tarot-container"></div>
-            <button id="reset-tarot" class="btn">Nueva Tirada</button>
-            <div id="tarot-result"></div>
-        </section>
-
-        <section id="runes" class="section animate-section">
-            <h2>Tirada de Runas Online Gratis</h2>
-            <p>Selecciona 3 runas Elder Futhark para recibir orientación ancestral.</p>
-            <div id="rune-cards" class="rune-container"></div>
-            <button id="reset-runes" class="btn">Nueva Tirada</button>
-            <div id="rune-result"></div>
-        </section>
-
-        <section id="blog" class="section animate-section">
-            <h2>Blog</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1519608317840-291d0cb86b18" alt="Runas">
-                    <h3>El Poder de las Runas</h3>
-                    <p>Explora el significado y la magia de las runas Elder Futhark.</p>
-                    <a href="#" class="btn">Leer Más</a>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1529429617124-95b109e86bb8" alt="Luna">
-                    <h3>Guía para la Luna Nueva</h3>
-                    <p>Rituales y meditaciones para aprovechar la energía lunar.</p>
-                    <a href="#" class="btn">Leer Más</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="section animate-section">
-            <h2>Testimonios</h2>
-            <div class="testimonials">
-                <div class="testimonial-card">
-                    <p>"La lectura de tarot fue precisa y transformadora. ¡Increíble!"</p>
-                    <p><strong>- Ana G.</strong></p>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Las runas me dieron claridad en un momento clave."</p>
-                    <p><strong>- Luis M.</strong></p>
-                    <div class="stars">★★★★</div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"La consulta astrológica fue reveladora y profesional."</p>
-                    <p><strong>- María P.</strong></p>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"La sanación con cristales equilibró mi energía."</p>
-                    <p><strong>- Carlos R.</strong></p>
-                    <div class="stars">★★★★</div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"El club exclusivo es un tesoro espiritual."</p>
-                    <p><strong>- Sofía L.</strong></p>
-                    <div class="stars">★★★★★</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section animate-section">
-            <h2>Contacto</h2>
-            <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Mensaje:</label>
-                <textarea id="message" rows="5" required></textarea>
-            </div>
-            <button id="submit-contact" class="btn">Enviar</button>
-            <p><strong>WhatsApp:</strong> +34 123 456 789</p>
-            <p><strong>Email:</strong> contacto@tarotcelestial.com</p>
-            <h3>Reserva tu Consulta</h3>
-            <iframe src="https://calendly.com/your-calendly/30min" width="100%" height="600" frameborder="0"></iframe>
-            <h3>Pago Seguro</h3>
-            <p>Paga con PayPal o Bizum:</p>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_BUTTON_ID">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            </form>
-            <p><strong>Bizum:</strong> +34 123 456 789</p>
-            <h3>Newsletter</h3>
-            <div class="form-group">
-                <label for="newsletter-email">Suscríbete para predicciones semanales:</label>
-                <input type="email" id="newsletter-email" required>
-                <button id="submit-newsletter" class="btn">Suscribirse</button>
-            </div>
+            <a href="contact.html" class="btn">Contáctame</a>
         </section>
     </div>
 
@@ -199,7 +43,7 @@
 
     <footer>
         <p>© 2025 Tarot Celestial. Todos los derechos reservados.</p>
-        <p><a href="#privacy">Política de Privacidad</a> | <a href="#terms">Términos y Condiciones</a></p>
+        <p><a href="contact.html#privacy">Política de Privacidad</a> | <a href="contact.html#terms">Términos y Condiciones</a></p>
         <p>
             <a href="https://instagram.com/tarotcelestial"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
             <a href="https://tiktok.com/@tarotcelestial"><img src="https://img.icons8.com/ios-filled/24/ffffff/tiktok.png" alt="TikTok"></a>
