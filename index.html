@@ -3,112 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarot Profesional | Consultas Personalizadas</title>
+    <meta name="description" content="Consulta tu destino con nuestras tiradas de tarot profesionales. Tiradas interactivas online, sesiones en vivo y grabaciones personalizadas.">
+    <meta name="keywords" content="tarot profesional, tirada de cartas online, tarot del amor, tarot marsella">
+    <meta name="author" content="Tu Nombre">
+    <title>Tarot Celestial - Tu Camino Iluminado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans&display=swap" rel="stylesheet">
-    <script src="https://www.paypal.com/sdk/js?client-id=TU_CLIENT_ID&currency=EUR"></script>
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="logo">
-            <h1>Tarot Marsella</h1>
-            <p>Descubre lo que las cartas revelan</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#tirada">Tirada Gratis</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <h1>Tarot Celestial</h1>
     </header>
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#about">Sobre Mí</a>
+        <a href="#services">Servicios</a>
+        <a href="#tarot">Tirada Online</a>
+        <a href="#blog">Blog</a>
+        <a href="#testimonials">Testimonios</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+    <div class="container">
+        <section id="home" class="hero">
+            <h2>Ilumina tu Destino con el Tarot</h2>
+            <p>Descubre los mensajes del universo con nuestras lecturas profesionales.</p>
+            <a href="#tarot" class="btn">Prueba una Tirada Gratis</a>
+        </section>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-text">
-            <h2>Tu destino en las cartas</h2>
-            <p>Lecturas precisas con el auténtico Tarot de Marsella</p>
-            <a href="#tirada" class="btn">Tirada Gratuita</a>
-        </div>
-    </section>
+        <section id="about" class="section">
+            <h2>Sobre Mí</h2>
+            <p>Soy una tarotista certificada con 15 años de experiencia, dedicada a guiarte en tu camino espiritual. Mi enfoque combina intuición y sabiduría ancestral para ofrecerte claridad y paz.</p>
+            <p><strong>Certificado:</strong> Diplomada en Tarot Terapéutico por la Escuela Esotérica de Barcelona.</p>
+        </section>
 
-    <!-- Servicios -->
-    <section id="servicios" class="services">
-        <h2>Mis Servicios</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>Consulta Básica</h3>
-                <p>30 min - 29€</p>
+        <section id="services" class="section">
+            <h2>Servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Tirada de Amor</h3>
+                    <p>Descubre el futuro de tus relaciones con una lectura especializada.</p>
+                    <a href="#contact" class="btn">Reservar</a>
+                </div>
+                <div class="card">
+                    <h3>Sesión en Vivo</h3>
+                    <p>Consulta personalizada por videollamada o chat en tiempo real.</p>
+                    <a href="#contact" class="btn">Reservar</a>
+                </div>
+                <div class="card">
+                    <h3>Lectura Grabada</h3>
+                    <p>Recibe un video o audio personalizado con tu tirada.</p>
+                    <a href="#contact" class="btn">Reservar</a>
+                </div>
+                <div class="card">
+                    <h3>Club Exclusivo</h3>
+                    <p>Únete a nuestra membresía para rituales y meditaciones guiadas.</p>
+                    <a href="#contact" class="btn">Suscribirse</a>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Lectura Completa</h3>
-                <p>60 min - 49€</p>
-            </div>
-            <div class="service-card">
-                <h3>Tarot del Amor</h3>
-                <p>Análisis profundo - 39€</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Tirada de Tarot -->
-    <section id="tirada" class="tarot-reading">
-        <h2>Tirada de 3 Cartas</h2>
-        <div class="tarot-container">
-            <div id="card-slots" class="card-slots">
-                <!-- Cartas aparecerán aquí -->
-            </div>
-            <button id="draw-cards" class="btn">Tirar las Cartas</button>
-            <div id="reading-result" class="reading-result">
-                <h3>Tu lectura:</h3>
-                <p id="reading-text">Haz clic para revelar tu destino...</p>
-            </div>
-        </div>
-    </section>
+        <section id="tarot" class="section">
+            <h2>Tirada de Tarot Online Gratis</h2>
+            <p>Elige 3 cartas y descubre su mensaje para ti.</p>
+            <div id="tarot-cards" class="tarot-container"></div>
+            <button id="reset-cards" class="btn">Nueva Tirada</button>
+            <div id="tarot-result"></div>
+        </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="contact">
-        <h2>Reserva tu Consulta</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Email" required>
-            <select required>
-                <option value="">Selecciona servicio</option>
-                <option>Consulta Básica (29€)</option>
-                <option>Lectura Completa (49€)</option>
-                <option>Tarot del Amor (39€)</option>
-            </select>
-            <textarea placeholder="Tu pregunta o preferencia de horario..."></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
-    </section>
+        <section id="blog" class="section">
+            <h2>Blog</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="El Loco">
+                    <h3>¿Qué significa El Loco?</h3>
+                    <p>Explora el simbolismo de esta poderosa carta del tarot.</p>
+                    <a href="#" class="btn">Leer Más</a>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da" alt="Rituales">
+                    <h3>Rituales para la Luna Llena</h3>
+                    <p>Aprovecha la energía lunar con estos sencillos rituales.</p>
+                    <a href="#" class="btn">Leer Más</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Modal de Pago -->
-    <div id="payment-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Consulta Premium (19.99€)</h3>
-            
-            <div class="payment-option">
-                <h4>Bizum</h4>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Bizum_logo.svg/1200px-Bizum_logo.svg.png" alt="Bizum" width="100">
-                <p>Envía el pago a:</p>
-                <p class="bizum-number">+34 612 345 678</p>
-                <small>Indica tu email en el concepto</small>
+        <section id="testimonials" class="section">
+            <h2>Testimonios</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <p>"La lectura fue increíblemente precisa y me dio claridad en un momento difícil."</p>
+                    <p><strong>- Ana G.</strong></p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"El club exclusivo ha transformado mi práctica espiritual. ¡Recomendado!"</p>
+                    <p><strong>- Luis M.</strong></p>
+                    <div class="stars">★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"La tirada online gratuita fue sorprendentemente reveladora."</p>
+                    <p><strong>- María P.</strong></p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"La sesión en vivo fue una experiencia única y muy profesional."</p>
+                    <p><strong>- Carlos R.</strong></p>
+                    <div class="stars">★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Las grabaciones personalizadas son un tesoro para reflexionar."</p>
+                    <p><strong>- Sofía L.</strong></p>
+                    <div class="stars">★★★★★</div>
+                </div>
             </div>
-            
-            <div class="payment-option">
-                <h4>PayPal</h4>
-                <div id="paypal-button-container"></div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contacto</h2>
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button id="submit-contact" class="btn">Enviar</button>
+            <p><strong>WhatsApp:</strong> +34 123 456 789</p>
+            <p><strong>Email:</strong> contacto@tarotcelestial.com</p>
+            <h3>Reserva tu Consulta</h3>
+            <iframe src="https://calendly.com/your-calendly/30min" width="100%" height="600" frameborder="0"></iframe>
+            <h3>Pago Seguro</h3>
+            <p>Paga con PayPal o Bizum:</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_BUTTON_ID">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            </form>
+            <p><strong>Bizum:</strong> +34 123 456 789</p>
+            <h3>Newsletter</h3>
+            <div class="form-group">
+                <label for="newsletter-email">Suscríbete para predicciones semanales:</label>
+                <input type="email" id="newsletter-email" required>
+                <button id="submit-newsletter" class="btn">Suscribirse</button>
+            </div>
+        </section>
     </div>
 
-    <!-- Footer -->
+    <div id="chat-box" class="chat-box">
+        <h3>Chat en Vivo</h3>
+        <textarea id="chat-message" placeholder="Escribe tu mensaje..."></textarea>
+        <button id="send-chat" class="btn">Enviar</button>
+    </div>
+    <button id="toggle-chat" class="btn" style="position: fixed; bottom: 20px; right: 20px;">Abrir Chat</button>
+
     <footer>
-        <p>&copy; 2023 Tarot Marsella - Todos los derechos reservados</p>
+        <p>© 2025 Tarot Celestial. Todos los derechos reservados.</p>
+        <p><a href="#privacy">Política de Privacidad</a> | <a href="#terms">Términos y Condiciones</a></p>
+        <p>
+            <a href="https://instagram.com/tarotcelestial"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
+            <a href="https://tiktok.com/@tarotcelestial"><img src="https://img.icons8.com/ios-filled/24/ffffff/tiktok.png" alt="TikTok"></a>
+            <a href="https://youtube.com/@tarotcelestial"><img src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png" alt="YouTube"></a>
+        </p>
     </footer>
 
     <script src="script.js"></script>

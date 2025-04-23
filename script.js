@@ -1,179 +1,160 @@
-// Array completo de 78 cartas del Tarot Marsella
+// Array of 78 Marseille Tarot Cards with Brief Meanings
 const tarotCards = [
-    // === Arcanos Mayores (22 cartas) ===
-    { name: "0. El Loco", meaning: "Libertad, espontaneidad, locura creativa. Nuevos comienzos.", arcana: "major" },
-    { name: "I. El Mago", meaning: "Habilidad, destreza, concentración. El poder de la voluntad.", arcana: "major" },
-    { name: "II. La Sacerdotisa", meaning: "Intuición, misterio, sabiduría oculta. Paciencia.", arcana: "major" },
-    { name: "III. La Emperatriz", meaning: "Fertilidad, naturaleza, abundancia. Amor maternal.", arcana: "major" },
-    { name: "IV. El Emperador", meaning: "Autoridad, estructura, poder establecido. Protección.", arcana: "major" },
-    { name: "V. El Hierofante", meaning: "Tradición, espiritualidad, enseñanza. Búsqueda de sentido.", arcana: "major" },
-    { name: "VI. Los Enamorados", meaning: "Amor, unión, elecciones. Relaciones importantes.", arcana: "major" },
-    { name: "VII. El Carro", meaning: "Victoria, autocontrol, progreso. Fuerza de voluntad.", arcana: "major" },
-    { name: "VIII. La Justicia", meaning: "Equilibrio, justicia, causa y efecto. Decisiones kármicas.", arcana: "major" },
-    { name: "IX. El Ermitaño", meaning: "Introspección, soledad, búsqueda interior. Guía espiritual.", arcana: "major" },
-    { name: "X. La Rueda de la Fortuna", meaning: "Ciclos, destino, cambios inevitables. Suerte.", arcana: "major" },
-    { name: "XI. La Fuerza", meaning: "Fortaleza interior, paciencia, compasión. Dominio emocional.", arcana: "major" },
-    { name: "XII. El Colgado", meaning: "Sacrificio, nueva perspectiva. Espera y reflexión.", arcana: "major" },
-    { name: "XIII. La Muerte", meaning: "Transformación, finales necesarios. Renacimiento.", arcana: "major" },
-    { name: "XIV. La Templanza", meaning: "Equilibrio, moderación, curación. Paciencia.", arcana: "major" },
-    { name: "XV. El Diablo", meaning: "Ataduras, materialismo, sombras. Tentaciones.", arcana: "major" },
-    { name: "XVI. La Torre", meaning: "Caída repentina, revelación. Cambio drástico.", arcana: "major" },
-    { name: "XVII. La Estrella", meaning: "Esperanza, fe, inspiración. Sanación emocional.", arcana: "major" },
-    { name: "XVIII. La Luna", meaning: "Ilusión, intuición, inconsciente. Confusión temporal.", arcana: "major" },
-    { name: "XIX. El Sol", meaning: "Alegría, éxito, vitalidad. Claridad y verdad.", arcana: "major" },
-    { name: "XX. El Juicio", meaning: "Renacimiento, llamado interior. Absolución.", arcana: "major" },
-    { name: "XXI. El Mundo", meaning: "Completitud, logro, viaje. Ciclo cerrado.", arcana: "major" },
-
-    // === Arcanos Menores (56 cartas) ===
-    // Bastos (Fuego: Energía, creatividad)
-    { name: "As de Bastos", meaning: "Nuevos proyectos, energía creativa. Entusiasmo.", arcana: "minor", suit: "bastos" },
-    { name: "Dos de Bastos", meaning: "Planificación, decisiones. Oportunidades.", arcana: "minor", suit: "bastos" },
-    { name: "Tres de Bastos", meaning: "Colaboración, visión a largo plazo.", arcana: "minor", suit: "bastos" },
-    { name: "Cuatro de Bastos", meaning: "Celebración, armonía, recompensa.", arcana: "minor", suit: "bastos" },
-    { name: "Cinco de Bastos", meaning: "Conflicto, competencia, desafíos.", arcana: "minor", suit: "bastos" },
-    { name: "Seis de Bastos", meaning: "Victoria, reconocimiento, éxito.", arcana: "minor", suit: "bastos" },
-    { name: "Siete de Bastos", meaning: "Defensa, perseverancia, resistencia.", arcana: "minor", suit: "bastos" },
-    { name: "Ocho de Bastos", meaning: "Movimiento rápido, noticias, progreso.", arcana: "minor", suit: "bastos" },
-    { name: "Nueve de Bastos", meaning: "Resiliencia, fuerza ante la adversidad.", arcana: "minor", suit: "bastos" },
-    { name: "Diez de Bastos", meaning: "Carga, responsabilidades, agotamiento.", arcana: "minor", suit: "bastos" },
-    { name: "Paje de Bastos", meaning: "Mensajero, noticias, creatividad.", arcana: "minor", suit: "bastos" },
-    { name: "Caballero de Bastos", meaning: "Acción, pasión, impulso.", arcana: "minor", suit: "bastos" },
-    { name: "Reina de Bastos", meaning: "Confianza, independencia, carisma.", arcana: "minor", suit: "bastos" },
-    { name: "Rey de Bastos", meaning: "Liderazgo, visión, determinación.", arcana: "minor", suit: "bastos" },
-
-    // Copas (Agua: Emociones, amor)
-    { name: "As de Copas", meaning: "Amor nuevo, alegría emocional. Bendiciones.", arcana: "minor", suit: "copas" },
-    { name: "Dos de Copas", meaning: "Conexión emocional, amor. Armonía.", arcana: "minor", suit: "copas" },
-    { name: "Tres de Copas", meaning: "Celebración, amistad, comunidad.", arcana: "minor", suit: "copas" },
-    { name: "Cuatro de Copas", meaning: "Apatía, reflexión, oportunidades perdidas.", arcana: "minor", suit: "copas" },
-    { name: "Cinco de Copas", meaning: "Pérdida, arrepentimiento, duelo.", arcana: "minor", suit: "copas" },
-    { name: "Seis de Copas", meaning: "Nostalgia, recuerdos, inocencia.", arcana: "minor", suit: "copas" },
-    { name: "Siete de Copas", meaning: "Ilusiones, opciones, fantasía.", arcana: "minor", suit: "copas" },
-    { name: "Ocho de Copas", meaning: "Abandono, búsqueda interior.", arcana: "minor", suit: "copas" },
-    { name: "Nueve de Copas", meaning: "Satisfacción, deseos cumplidos.", arcana: "minor", suit: "copas" },
-    { name: "Diez de Copas", meaning: "Felicidad familiar, plenitud emocional.", arcana: "minor", suit: "copas" },
-    { name: "Paje de Copas", meaning: "Sensibilidad, creatividad emocional.", arcana: "minor", suit: "copas" },
-    { name: "Caballero de Copas", meaning: "Romance, idealismo, emociones.", arcana: "minor", suit: "copas" },
-    { name: "Reina de Copas", meaning: "Empatía, intuición, cuidado.", arcana: "minor", suit: "copas" },
-    { name: "Rey de Copas", meaning: "Sabiduría emocional, compasión.", arcana: "minor", suit: "copas" },
-
-    // Espadas (Aire: Mente, conflicto)
-    { name: "As de Espadas", meaning: "Claridad mental, verdad. Victoria intelectual.", arcana: "minor", suit: "espadas" },
-    { name: "Dos de Espadas", meaning: "Decisión difícil, equilibrio. Evasión.", arcana: "minor", suit: "espadas" },
-    { name: "Tres de Espadas", meaning: "Dolor emocional, traición, corazón roto.", arcana: "minor", suit: "espadas" },
-    { name: "Cuatro de Espadas", meaning: "Descanso, recuperación, retiro.", arcana: "minor", suit: "espadas" },
-    { name: "Cinco de Espadas", meaning: "Conflictos, victoria pírrica.", arcana: "minor", suit: "espadas" },
-    { name: "Seis de Espadas", meaning: "Transición, cambio, movimiento.", arcana: "minor", suit: "espadas" },
-    { name: "Siete de Espadas", meaning: "Engaño, estrategia, secretos.", arcana: "minor", suit: "espadas" },
-    { name: "Ocho de Espadas", meaning: "Restricción, impotencia, miedo.", arcana: "minor", suit: "espadas" },
-    { name: "Nueve de Espadas", meaning: "Ansiedad, pesadillas, culpa.", arcana: "minor", suit: "espadas" },
-    { name: "Diez de Espadas", meaning: "Final doloroso, traición, crisis.", arcana: "minor", suit: "espadas" },
-    { name: "Paje de Espadas", meaning: "Curiosidad, ideas nuevas, comunicación.", arcana: "minor", suit: "espadas" },
-    { name: "Caballero de Espadas", meaning: "Acción rápida, determinación, conflicto.", arcana: "minor", suit: "espadas" },
-    { name: "Reina de Espadas", meaning: "Independencia, inteligencia, objetividad.", arcana: "minor", suit: "espadas" },
-    { name: "Rey de Espadas", meaning: "Autoridad intelectual, justicia, razón.", arcana: "minor", suit: "espadas" },
-
-    // Oros (Tierra: Dinero, trabajo)
-    { name: "As de Oros", meaning: "Abundancia material, nueva oportunidad económica.", arcana: "minor", suit: "oros" },
-    { name: "Dos de Oros", meaning: "Equilibrio financiero, malabarismos. Adaptación.", arcana: "minor", suit: "oros" },
-    { name: "Tres de Oros", meaning: "Trabajo en equipo, maestría, colaboración.", arcana: "minor", suit: "oros" },
-    { name: "Cuatro de Oros", meaning: "Estabilidad, conservación, control.", arcana: "minor", suit: "oros" },
-    { name: "Cinco de Oros", meaning: "Pérdida material, dificultades económicas.", arcana: "minor", suit: "oros" },
-    { name: "Seis de Oros", meaning: "Generosidad, ayuda mutua, compartir.", arcana: "minor", suit: "oros" },
-    { name: "Siete de Oros", meaning: "Inversión a largo plazo, paciencia.", arcana: "minor", suit: "oros" },
-    { name: "Ocho de Oros", meaning: "Artesanía, dedicación, aprendizaje.", arcana: "minor", suit: "oros" },
-    { name: "Nueve de Oros", meaning: "Autosuficiencia, lujo, disfrute.", arcana: "minor", suit: "oros" },
-    { name: "Diez de Oros", meaning: "Legado, riqueza familiar, seguridad.", arcana: "minor", suit: "oros" },
-    { name: "Paje de Oros", meaning: "Oportunidad material, noticias financieras.", arcana: "minor", suit: "oros" },
-    { name: "Caballero de Oros", meaning: "Responsabilidad, método, avance lento.", arcana: "minor", suit: "oros" },
-    { name: "Reina de Oros", meaning: "Práctica, generosidad, abundancia.", arcana: "minor", suit: "oros" },
-    { name: "Rey de Oros", meaning: "Seguridad financiera, liderazgo práctico.", arcana: "minor", suit: "oros" }
+    { name: "El Loco", meaning: "Nuevos comienzos, espontaneidad, pero cuidado con la impulsividad." },
+    { name: "El Mago", meaning: "Habilidad, creatividad y manifestación de tus deseos." },
+    { name: "La Sacerdotisa", meaning: "Intuición, sabiduría oculta y conexión espiritual." },
+    { name: "La Emperatriz", meaning: "Abundancia, fertilidad y conexión con la naturaleza." },
+    { name: "El Emperador", meaning: "Autoridad, estructura y control." },
+    { name: "El Sumo Sacerdote", meaning: "Tradición, guía espiritual y conformidad." },
+    { name: "Los Enamorados", meaning: "Amor, decisiones importantes y armonía." },
+    { name: "El Carro", meaning: "Determinación, victoria y dirección clara." },
+    { name: "La Justicia", meaning: "Equilibrio, verdad y consecuencias justas." },
+    { name: "El Ermitaño", meaning: "Introspección, búsqueda de la verdad interior." },
+    { name: "La Rueda de la Fortuna", meaning: "Cambio, ciclos y destino." },
+    { name: "La Fuerza", meaning: "Coraje, autocontrol y fuerza interior." },
+    { name: "El Colgado", meaning: "Sacrificio, pausa y nueva perspectiva." },
+    { name: "La Muerte", meaning: "Transformación, finales y nuevos comienzos." },
+    { name: "La Templanza", meaning: "Equilibrio, moderación y armonía." },
+    { name: "El Diablo", meaning: "Tentación, ataduras y materialismo." },
+    { name: "La Torre", meaning: "Cambio repentino, destrucción y revelación." },
+    { name: "La Estrella", meaning: "Esperanza, inspiración y renovación." },
+    { name: "La Luna", meaning: "Ilusión, intuición y subconsciente." },
+    { name: "El Sol", meaning: "Éxito, vitalidad y claridad." },
+    { name: "El Juicio", meaning: "Renacimiento, evaluación y despertar." },
+    { name: "El Mundo", meaning: "Culminación, éxito y unidad." },
+    { name: "As de Bastos", meaning: "Inspiración, nuevos proyectos y energía creativa." },
+    { name: "Dos de Bastos", meaning: "Planificación, decisiones y expansión." },
+    { name: "Tres de Bastos", meaning: "Progreso, visión a largo plazo y oportunidades." },
+    { name: "Cuatro de Bastos", meaning: "Celebración, estabilidad y comunidad." },
+    { name: "Cinco de Bastos", meaning: "Competencia, conflicto y desafíos." },
+    { name: "Seis de Bastos", meaning: "Victoria, reconocimiento y éxito público." },
+    { name: "Siete de Bastos", meaning: "Defensa, perseverancia y resistencia." },
+    { name: "Ocho de Bastos", meaning: "Movimiento rápido, progreso y acción." },
+    { name: "Nueve de Bastos", meaning: "Resiliencia, determinación y protección." },
+    { name: "Diez de Bastos", meaning: "Carga, responsabilidad y trabajo duro." },
+    { name: "Sota de Bastos", meaning: "Entusiasmo, exploración y mensajes." },
+    { name: "Caballero de Bastos", meaning: "Aventura, pasión y acción impulsiva." },
+    { name: "Reina de Bastos", meaning: "Confianza, liderazgo y creatividad." },
+    { name: "Rey de Bastos", meaning: "Visión, liderazgo y emprendimiento." },
+    { name: "As de Copas", meaning: "Amor, emociones profundas y nuevos sentimientos." },
+    { name: "Dos de Copas", meaning: "Unión, amor mutuo y conexión emocional." },
+    { name: "Tres de Copas", meaning: "Amistad, celebración y alegría." },
+    { name: "Cuatro de Copas", meaning: "Apathía, reevaluación y desconexión." },
+    { name: "Cinco de Copas", meaning: "Pérdida, arrepentimiento y tristeza." },
+    { name: "Seis de Copas", meaning: "Nostalgia, recuerdos y reencuentros." },
+    { name: "Siete de Copas", meaning: "Ilusiones, opciones y sueños." },
+    { name: "Ocho de Copas", meaning: "Abandono, búsqueda y transición." },
+    { name: "Nueve de Copas", meaning: "Satisfacción, deseos cumplidos y felicidad." },
+    { name: "Diez de Copas", meaning: "Armonía, familia y felicidad duradera." },
+    { name: "Sota de Copas", meaning: "Sensibilidad, mensajes emocionales y creatividad." },
+    { name: "Caballero de Copas", meaning: "Romanticismo, idealismo y encanto." },
+    { name: "Reina de Copas", meaning: "Empatía, intuición y cuidado emocional." },
+    { name: "Rey de Copas", meaning: "Control emocional, compasión y madurez." },
+    { name: "As de Espadas", meaning: "Claridad, verdad y nuevos pensamientos." },
+    { name: "Dos de Espadas", meaning: "Indecisión, estancamiento y equilibrio tenso." },
+    { name: "Tres de Espadas", meaning: "Dolor, traición y corazón roto." },
+    { name: "Cuatro de Espadas", meaning: "Descanso, recuperación y reflexión." },
+    { name: "Cinco de Espadas", meaning: "Conflicto, derrota y egoísmo." },
+    { name: "Seis de Espadas", meaning: "Transición, viaje y sanación." },
+    { name: "Siete de Espadas", meaning: "Engaño, estrategia y astucia." },
+    { name: "Ocho de Espadas", meaning: "Restricción, confusión y limitaciones." },
+    { name: "Nueve de Espadas", meaning: "Ansiedad, pesadillas y preocupación." },
+    { name: "Diez de Espadas", meaning: "Traición, final doloroso y colapso." },
+    { name: "Sota de Espadas", meaning: "Curiosidad, vigilancia y nuevas ideas." },
+    { name: "Caballero de Espadas", meaning: "Ambición, acción rápida y determinación." },
+    { name: "Reina de Espadas", meaning: "Claridad, independencia y honestidad." },
+    { name: "Rey de Espadas", meaning: "Autoridad intelectual, verdad y lógica." },
+    { name: "As de Oros", meaning: "Prosperidad, nuevos comienzos financieros." },
+    { name: "Dos de Oros", meaning: "Equilibrio, adaptabilidad y multitarea." },
+    { name: "Tres de Oros", meaning: "Colaboración, trabajo en equipo y maestría." },
+    { name: "Cuatro de Oros", meaning: "Seguridad, control y avaricia." },
+    { name: "Cinco de Oros", meaning: "Pérdida, inseguridad y dificultades." },
+    { name: "Seis de Oros", meaning: "Generosidad, caridad y equilibrio." },
+    { name: "Siete de Oros", meaning: "Paciencia, esfuerzo y crecimiento lento." },
+    { name: "Ocho de Oros", meaning: "Dedicación, aprendizaje y trabajo duro." },
+    { name: "Nueve de Oros", meaning: "Independencia, lujo y autosuficiencia." },
+    { name: "Diez de Oros", meaning: "Riqueza, legado y estabilidad familiar." },
+    { name: "Sota de Oros", meaning: "Oportunidades, aprendizaje y ambición." },
+    { name: "Caballero de Oros", meaning: "Responsabilidad, trabajo duro y fiabilidad." },
+    { name: "Reina de Oros", meaning: "Nutrición, seguridad y practicidad." },
+    { name: "Rey de Oros", meaning: "Éxito, riqueza y liderazgo práctico." }
 ];
 
-// Tirada de Tarot
-document.getElementById('draw-cards').addEventListener('click', function() {
-    const cardSlots = document.getElementById('card-slots');
-    const readingText = document.getElementById('reading-text');
-    
-    // Limpiar tirada anterior
-    cardSlots.innerHTML = '';
-    readingText.innerHTML = '<p>Cargando tu destino...</p>';
-    
-    // Seleccionar 3 cartas al azar
-    const selectedCards = [];
-    for (let i = 0; i < 3; i++) {
-        const randomIndex = Math.floor(Math.random() * tarotCards.length);
-        selectedCards.push(tarotCards[randomIndex]);
-        
-        // Crear elemento de carta
+// Tarot Card Logic
+const tarotContainer = document.getElementById('tarot-cards');
+const tarotResult = document.getElementById('tarot-result');
+const resetButton = document.getElementById('reset-cards');
+let selectedCards = [];
+
+function renderCards() {
+    tarotContainer.innerHTML = '';
+    const shuffledCards = tarotCards.sort(() => Math.random() - 0.5).slice(0, 10);
+    shuffledCards.forEach((card, index) => {
         const cardElement = document.createElement('div');
-        cardElement.className = 'card';
-        cardElement.innerHTML = `<span>${tarotCards[randomIndex].name}</span>`;
-        cardSlots.appendChild(cardElement);
-        
-        // Animación de volteo
-        setTimeout(() => {
-            cardElement.style.transform = 'rotateY(180deg)';
-        }, i * 300);
-    }
-    
-    // Mostrar interpretación después de 1.5 segundos
-    setTimeout(() => {
-        let reading = `
-            <p><strong>Pasado:</strong> ${selectedCards[0].meaning}</p>
-            <p><strong>Presente:</strong> ${selectedCards[1].meaning}</p>
-            <p><strong>Futuro:</strong> ${selectedCards[2].meaning}</p>
-            <button id="upgrade-reading" class="btn upgrade-btn">Consulta Detallada (19.99€)</button>
+        cardElement.classList.add('tarot-card');
+        cardElement.innerHTML = `
+            <div class="tarot-card-inner">
+                <div class="card-front"></div>
+                <div class="card-back">${card.name}<br>${card.meaning}</div>
+            </div>
         `;
-        readingText.innerHTML = reading;
-        
-        // Configurar botón de mejora
-        document.getElementById('upgrade-reading').addEventListener('click', showPaymentModal);
-    }, 1500);
+        cardElement.addEventListener('click', () => selectCard(card, cardElement));
+        tarotContainer.appendChild(cardElement);
+    });
+}
+
+function selectCard(card, cardElement) {
+    if (selectedCards.length < 3 && !selectedCards.includes(card)) {
+        selectedCards.push(card);
+        cardElement.classList.add('flipped');
+        tarotResult.innerHTML += `<p><strong>${card.name}:</strong> ${card.meaning}</p>`;
+        if (selectedCards.length === 3) {
+            tarotContainer.querySelectorAll('.tarot-card').forEach(card => card.style.pointerEvents = 'none');
+        }
+    }
+}
+
+resetButton.addEventListener('click', () => {
+    selectedCards = [];
+    tarotResult.innerHTML = '';
+    renderCards();
+    tarotContainer.querySelectorAll('.tarot-card').forEach(card => card.style.pointerEvents = 'auto');
 });
 
-// Modal de Pago
-function showPaymentModal() {
-    document.getElementById('payment-modal').style.display = "block";
-}
+// Initial Render
+renderCards();
 
-function closeModal() {
-    document.getElementById('payment-modal').style.display = "none";
-}
-
-// Cerrar modal al hacer clic en X o fuera
-document.querySelector('.close').addEventListener('click', closeModal);
-window.addEventListener('click', function(e) {
-    if (e.target === document.getElementById('payment-modal')) {
-        closeModal();
+// Chat Functionality
+const chatBox = document.getElementById('chat-box');
+document.getElementById('toggle-chat').addEventListener('click', () => {
+    chatBox.classList.toggle('active');
+});
+document.getElementById('send-chat').addEventListener('click', () => {
+    const message = document.getElementById('chat-message').value;
+    if (message) {
+        alert('Mensaje enviado: ' + message);
+        document.getElementById('chat-message').value = '';
     }
 });
 
-// PayPal Integration
-paypal.Buttons({
-    createOrder: function(data, actions) {
-        return actions.order.create({
-            purchase_units: [{
-                amount: {
-                    value: '19.99'
-                }
-            }]
-        });
-    },
-    onApprove: function(data, actions) {
-        return actions.order.capture().then(function(details) {
-            alert('Pago completado por ' + details.payer.name.given_name + '! ID: ' + data.orderID);
-            closeModal();
-        });
-    },
-    onError: function(err) {
-        alert('Error en el pago: ' + err);
+// Contact Form Submission
+document.getElementById('submit-contact').addEventListener('click', () => {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    if (name && email && message) {
+        alert('Formulario enviado. ¡Gracias por tu mensaje!');
+    } else {
+        alert('Por favor, completa todos los campos.');
     }
-}).render('#paypal-button-container');
+});
 
-// Formulario de Contacto
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Consulta enviada. Te responderé en 24 horas.');
-    this.reset();
+// Newsletter Subscription
+document.getElementById('submit-newsletter').addEventListener('click', () => {
+    const email = document.getElementById('newsletter-email').value;
+    if (email) {
+        alert('¡Suscrito correctamente a la newsletter!');
+    } else {
+        alert('Por favor, ingresa un email válido.');
+    }
 });
