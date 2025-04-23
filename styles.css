@@ -1,0 +1,304 @@
+/* Reset y Fuentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f5f0;
+}
+
+header {
+    background: #4a2c82;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo h1 {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'MedievalSharp', cursive;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    background: #d4af37;
+    color: #000;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #c19b2e;
+    transform: translateY(-3px);
+}
+
+/* Servicios */
+.services {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: white;
+}
+
+.services h2 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: #4a2c82;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: #f9f5f0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    color: #4a2c82;
+    margin-bottom: 0.5rem;
+}
+
+/* Tirada de Tarot */
+.tarot-reading {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #e8e1d7;
+}
+
+.tarot-reading h2 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: #4a2c82;
+}
+
+.card-slots {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    min-height: 220px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 120px;
+    height: 200px;
+    background: #4a2c82;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transition: all 0.5s;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.card span {
+    transform: rotate(0deg);
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.reading-result {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.reading-result h3 {
+    color: #4a2c82;
+    margin-bottom: 1rem;
+}
+
+/* Contacto */
+.contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: white;
+}
+
+.contact h2 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: #4a2c82;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 1rem;
+}
+
+input, select, textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Modal de Pago */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    position: relative;
+    animation: modalopen 0.5s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0; transform: translateY(-50px)}
+    to {opacity: 1; transform: translateY(0)}
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #4a2c82;
+}
+
+.payment-option {
+    background: #f9f5f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border: 1px solid #e8e1d7;
+}
+
+.payment-option h4 {
+    color: #4a2c82;
+    margin-bottom: 1rem;
+}
+
+.bizum-number {
+    font-size: 1.5rem;
+    color: #4a2c82;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+#paypal-button-container {
+    margin: 1rem 0;
+}
+
+/* Footer */
+footer {
+    background: #4a2c82;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .card {
+        width: 100px;
+        height: 160px;
+        font-size: 1rem;
+    }
+}

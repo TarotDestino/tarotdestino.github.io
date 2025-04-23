@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Profesional | Consultas Personalizadas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://www.paypal.com/sdk/js?client-id=TU_CLIENT_ID&currency=EUR"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Tarot Marsella</h1>
+            <p>Descubre lo que las cartas revelan</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#tirada">Tirada Gratis</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-text">
+            <h2>Tu destino en las cartas</h2>
+            <p>Lecturas precisas con el auténtico Tarot de Marsella</p>
+            <a href="#tirada" class="btn">Tirada Gratuita</a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="services">
+        <h2>Mis Servicios</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Consulta Básica</h3>
+                <p>30 min - 29€</p>
+            </div>
+            <div class="service-card">
+                <h3>Lectura Completa</h3>
+                <p>60 min - 49€</p>
+            </div>
+            <div class="service-card">
+                <h3>Tarot del Amor</h3>
+                <p>Análisis profundo - 39€</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tirada de Tarot -->
+    <section id="tirada" class="tarot-reading">
+        <h2>Tirada de 3 Cartas</h2>
+        <div class="tarot-container">
+            <div id="card-slots" class="card-slots">
+                <!-- Cartas aparecerán aquí -->
+            </div>
+            <button id="draw-cards" class="btn">Tirar las Cartas</button>
+            <div id="reading-result" class="reading-result">
+                <h3>Tu lectura:</h3>
+                <p id="reading-text">Haz clic para revelar tu destino...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <h2>Reserva tu Consulta</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <select required>
+                <option value="">Selecciona servicio</option>
+                <option>Consulta Básica (29€)</option>
+                <option>Lectura Completa (49€)</option>
+                <option>Tarot del Amor (39€)</option>
+            </select>
+            <textarea placeholder="Tu pregunta o preferencia de horario..."></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Modal de Pago -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Consulta Premium (19.99€)</h3>
+            
+            <div class="payment-option">
+                <h4>Bizum</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Bizum_logo.svg/1200px-Bizum_logo.svg.png" alt="Bizum" width="100">
+                <p>Envía el pago a:</p>
+                <p class="bizum-number">+34 612 345 678</p>
+                <small>Indica tu email en el concepto</small>
+            </div>
+            
+            <div class="payment-option">
+                <h4>PayPal</h4>
+                <div id="paypal-button-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Tarot Marsella - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
