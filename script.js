@@ -90,7 +90,7 @@ const runes = [
     { name: "Kenaz", symbol: "ᚲ", meaning: "Creatividad, iluminación, transformación.", prediction: "Tu chispa creativa iluminará el camino a seguir.", image: "images/runes/rune_5.png" },
     { name: "Gebo", symbol: "ᚷ", meaning: "Asociación, generosidad, equilibrio.", prediction: "Una alianza traerá beneficios mutuos.", image: "images/runes/rune_6.png" },
     { name: "Wunjo", symbol: "ᚹ", meaning: "Alegría, armonía, satisfacción.", prediction: "La felicidad y la paz están a tu alcance.", image: "images/runes/rune_7.png" },
-    { name: "Hagalaz", symbol: "hack: "ᚺ", meaning: "Cambio, disrupción, liberación.", prediction: "Acepta un cambio inesperado para crecer.", image: "images/runes/rune_8.png" },
+    { name: "Hagalaz", symbol: "ᚺ", meaning: "Cambio, disrupción, liberación.", prediction: "Acepta un cambio inesperado para crecer.", image: "images/runes/rune_8.png" },
     { name: "Nauthiz", symbol: "ᚾ", meaning: "Necesidad, resistencia, superación.", prediction: "Enfrenta los retos con determinación para triunfar.", image: "images/runes/rune_9.png" },
     { name: "Isa", symbol: "ᛁ", meaning: "Pausa, introspección, estancamiento.", prediction: "Tómate un tiempo para reflexionar antes de actuar.", image: "images/runes/rune_10.png" },
     { name: "Jera", symbol: "ᛃ", meaning: "Cosecha, ciclos, recompensa.", prediction: "La paciencia dará frutos valiosos.", image: "images/runes/rune_11.png" },
@@ -108,12 +108,14 @@ const runes = [
     { name: "Othala", symbol: "ᛟ", meaning: "Hogar, herencia, legado.", prediction: "Concéntrate en la familia y tus raíces para encontrar estabilidad.", image: "images/runes/rune_23.png" }
 ];
 
-// Tarot Card Logic
+// Tarot Card Logic (Slot Machine Style)
 function initTarot() {
-    const tarotContainer = document.getElementById('tarot-cards');
+    const slot1 = document.getElementById('slot-1');
+    const slot2 = document.getElementById('slot-2');
+    const slot3 = document.getElementById('slot-3');
+    const spinButton = document.getElementById('spin-button');
     const tarotResult = document.getElementById('tarot-result');
-    const resetButton = document.getElementById('reset-tarot');
-    let selectedCards = [];
+    let isSpinning = false;
 
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -123,38 +125,34 @@ function initTarot() {
         return array;
     }
 
-    function displayTarotCards() {
-        tarotContainer.innerHTML = '';
-        selectedCards = [];
-        tarotResult.innerHTML = '';
-        const shuffledCards = shuffle([...tarotCards]).slice(0, 10);
-        shuffledCards.forEach((card, index) => {
-            const cardElement = document.createElement('div');
-            cardElement.classList.add('tarot-card');
-            cardElement.style.setProperty('--index', index);
-            cardElement.innerHTML = `
-                <div class="tarot-card-inner">
-                    <div class="card-front"></div>
-                    <div class="card-back" style="background-image: url('${card.image}')"></div>
-                </div>
-            `;
-            cardElement.addEventListener('click', () => {
-                if (!cardElement.classList.contains('flipped') && selectedCards.length < 3) {
-                    cardElement.classList.add('flipped');
-                    selectedCards.push(card);
-                    if (selectedCards.length === 3) {
-                        displayTarotResults();
-                        tarotContainer.querySelectorAll('.tarot-card:not(.flipped)').forEach(c => c.style.opacity = '0.3');
-                    }
-                }
-            });
-            tarotContainer.appendChild(cardElement);
-        });
+    function spinSlot(slot, duration, finalCard) {
+        let startTime = null;
+        const spinInterval = 100; // Change image every 100ms
+        const shuffledCards = shuffle([...tarotCards]);
+
+        function animate(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+
+            // Update card image to create spinning effect
+            if (elapsed < duration) {
+                const randomCard = shuffledCards[Math.floor(Math.random() * shuffledCards.length)];
+                slot.style.backgroundImage = `url('${randomCard.image}')`;
+                slot.classList.add('spinning');
+                requestAnimationFrame(animate);
+            } else {
+                // Stop spinning, show final card
+                slot.style.backgroundImage = `url('${finalCard.image}')`;
+                slot.classList.remove('spinning');
+            }
+        }
+
+        requestAnimationFrame(animate);
     }
 
-    function displayTarotResults() {
+    function displayTarotResults(cards) {
         tarotResult.innerHTML = '';
-        selectedCards.forEach((card, index) => {
+        cards.forEach((card, index) => {
             const resultDiv = document.createElement('div');
             resultDiv.innerHTML = `
                 <h3>Carta ${index + 1}: ${card.name}</h3>
@@ -165,11 +163,30 @@ function initTarot() {
         });
     }
 
-    resetButton.addEventListener('click', displayTarotCards);
-    displayTarotCards();
+    spinButton.addEventListener('click', () => {
+        if (isSpinning) return;
+        isSpinning = true;
+        spinButton.disabled = true;
+        tarotResult.innerHTML = '';
+
+        // Select 3 random cards
+        const selectedCards = shuffle([...tarotCards]).slice(0, 3);
+
+        // Spin each slot with staggered stop times
+        spinSlot(slot1, 1000, selectedCards[0]); // Stop after 1s
+        spinSlot(slot2, 1500, selectedCards[1]); // Stop after 1.5s
+        spinSlot(slot3, 2000, selectedCards[2]); // Stop after 2s
+
+        // Display results after the last slot stops
+        setTimeout(() => {
+            displayTarotResults(selectedCards);
+            isSpinning = false;
+            spinButton.disabled = false;
+        }, 2000);
+    });
 }
 
-// Rune Logic
+// Rune Logic (Unchanged)
 function initRunes() {
     const runeContainer = document.getElementById('rune-cards');
     const runeResult = document.getElementById('rune-result');
@@ -301,7 +318,7 @@ function initScrollAnimations() {
 
 // Initialize Functions Based on Page
 document.addEventListener('DOMContentLoaded', () => {
-    if (document.getElementById('tarot-cards')) {
+    if (document.getElementById('spin-button')) {
         initTarot();
     }
     if (document.getElementById('rune-cards')) {

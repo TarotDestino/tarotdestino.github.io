@@ -3,12 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre los servicios esotéricos de Tarot Celestial: tarot, runas, astrología, sanación con cristales y más.">
-    <meta name="keywords" content="tirada de tarot, lectura de runas, astrología, sanación con cristales">
+    <meta name="description" content="Realiza una tirada de tarot online gratis con el Tarot de Marsella en Tarot Celestial, estilo máquina tragaperras.">
+    <meta name="keywords" content="tirada de tarot, tarot marsella, lectura de tarot gratis, tragaperras tarot">
     <meta name="author" content="Tarot Celestial">
-    <title>Tarot Celestial - Servicios</title>
+    <title>Tarot Celestial - Tirada de Tarot</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .slot-machine {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            background: #2e1a47;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+        .slot-window {
+            width: 180px;
+            height: 300px;
+            background: #0a0318;
+            border: 3px solid #d4a017;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slot-card {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 0.1s;
+        }
+        .slot-card.spinning {
+            animation: spin 0.1s infinite;
+        }
+        @keyframes spin {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        #spin-button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 40px;
+            font-size: 1.5em;
+        }
+        #tarot-result div {
+            background: #2e1a47;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        #tarot-result img {
+            max-width: 140px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="stars"></div>
@@ -25,65 +82,17 @@
         <a href="testimonials.html">Testimonios</a>
         <a href="contact.html">Contacto</a>
     </nav>
-    <div class="container services-bg">
+    <div class="container tarot-bg">
         <section class="section animate-section">
-            <h2>Servicios</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Tirada de Amor</h3>
-                    <p>Explora el futuro de tus relaciones con una lectura personalizada de tarot.</p>
-                    <p class="price">€30</p>
-                    <a href="contact.html" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Sesión en Vivo</h3>
-                    <p>Consulta privada por videollamada o chat en tiempo real.</p>
-                    <p class="price">€50</p>
-                    <a href="contact.html" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Lectura Grabada</h3>
-                    <p>Recibe un video o audio con tu tirada personalizada.</p>
-                    <p class="price">€40</p>
-                    <a href="contact.html" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Club Exclusivo</h3>
-                    <p>Membresía con rituales, meditaciones guiadas y contenido premium.</p>
-                    <p class="price">€15/mes</p>
-                    <a href="contact.html" class="btn">Suscribirse</a>
-                </div>
-                <div class="card">
-                    <h3>Lectura de Runas</h3>
-                    <p>Descubre mensajes ancestrales con una tirada de runas Elder Futhark.</p>
-                    <p class="price">€35</p>
-                    <a href="contact.html" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Consulta Astrológica</h3>
-                    <p>Carta natal, tránsitos o sinastría para entender tu camino cósmico.</p>
-                    <p class="price">€60</p>
-                    <a href="contact.html" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Sanación con Cristales</h3>
-                    <p>Equilibra tu energía con cristales seleccionados intuitivamente.</p>
-                    <p class="price">€45</p>
-                    <a href="contact.html" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Péndulo Divinatorio</h3>
-                    <p>Respuestas claras a tus preguntas con el arte del péndulo.</p>
-                    <p class="price">€25</p>
-                    <a href="contact.html" class="btn">Reservar</a>
-                </div>
-                <div class="card">
-                    <h3>Interpretación de Sueños</h3>
-                    <p>Descifra los mensajes ocultos en tus sueños para mayor claridad.</p>
-                    <p class="price">€35</p>
-                    <a href="contact.html" class="btn">Reservar</a>
-                </div>
+            <h2>Tirada de Tarot</h2>
+            <p>Gira para descubrir 3 cartas del Tarot de Marsella y sus mensajes para ti.</p>
+            <div class="slot-machine">
+                <div class="slot-window"><div class="slot-card" id="slot-1" style="background-image: url('images/cards/reverse_card.jpg')"></div></div>
+                <div class="slot-window"><div class="slot-card" id="slot-2" style="background-image: url('images/cards/reverse_card.jpg')"></div></div>
+                <div class="slot-window"><div class="slot-card" id="slot-3" style="background-image: url('images/cards/reverse_card.jpg')"></div></div>
             </div>
+            <button id="spin-button" class="btn">Girar</button>
+            <div id="tarot-result"></div>
         </section>
     </div>
 
