@@ -108,13 +108,31 @@ const runes = [
     { name: "Othala", symbol: "ᛟ", meaning: "Hogar, herencia, legado.", prediction: "Concéntrate en la familia y tus raíces para encontrar estabilidad.", image: "images/runes/rune_23.png" }
 ];
 
-// Tarot Card Logic (Slot Machine Style)
+// Hamburger Menu Toggle
+function initNavToggle() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+}
+
+// Tarot Card Logic (Slot Machine Style with 5 Cards and Modal)
 function initTarot() {
-    const slot1 = document.getElementById('slot-1');
-    const slot2 = document.getElementById('slot-2');
-    const slot3 = document.getElementById('slot-3');
+    const slots = [
+        document.getElementById('slot-1'),
+        document.getElementById('slot-2'),
+        document.getElementById('slot-3'),
+        document.getElementById('slot-4'),
+        document.getElementById('slot-5')
+    ];
     const spinButton = document.getElementById('spin-button');
+    const tarotModal = document.getElementById('tarot-modal');
     const tarotResult = document.getElementById('tarot-result');
+    const modalClose = document.querySelector('.modal-close');
     let isSpinning = false;
 
     function shuffle(array) {
@@ -154,13 +172,17 @@ function initTarot() {
         tarotResult.innerHTML = '';
         cards.forEach((card, index) => {
             const resultDiv = document.createElement('div');
+            resultDiv.className = 'modal-card';
             resultDiv.innerHTML = `
-                <h3>Carta ${index + 1}: ${card.name}</h3>
                 <img src="${card.image}" alt="${card.name}">
-                <p>${card.meaning}</p>
+                <div class="modal-card-text">
+                    <h3>Carta ${index + 1}: ${card.name}</h3>
+                    <p>${card.meaning}</p>
+                </div>
             `;
             tarotResult.appendChild(resultDiv);
         });
+        tarotModal.style.display = 'flex';
     }
 
     spinButton.addEventListener('click', () => {
@@ -169,24 +191,30 @@ function initTarot() {
         spinButton.disabled = true;
         tarotResult.innerHTML = '';
 
-        // Select 3 random cards
-        const selectedCards = shuffle([...tarotCards]).slice(0, 3);
+        // Select 5 random cards
+        const selectedCards = shuffle([...tarotCards]).slice(0, 5);
 
         // Spin each slot with staggered stop times
-        spinSlot(slot1, 1000, selectedCards[0]); // Stop after 1s
-        spinSlot(slot2, 1500, selectedCards[1]); // Stop after 1.5s
-        spinSlot(slot3, 2000, selectedCards[2]); // Stop after 2s
+        spinSlot(slots[0], 1000, selectedCards[0]); // Stop after 1s
+        spinSlot(slots[1], 1200, selectedCards[1]); // Stop after 1.2s
+        spinSlot(slots[2], 1400, selectedCards[2]); // Stop after 1.4s
+        spinSlot(slots[3], 1600, selectedCards[3]); // Stop after 1.6s
+        spinSlot(slots[4], 1800, selectedCards[4]); // Stop after 1.8s
 
-        // Display results after the last slot stops
+        // Display results in modal after the last slot stops
         setTimeout(() => {
             displayTarotResults(selectedCards);
             isSpinning = false;
             spinButton.disabled = false;
-        }, 2000);
+        }, 1800);
+    });
+
+    modalClose.addEventListener('click', () => {
+        tarotModal.style.display = 'none';
     });
 }
 
-// Rune Logic (Unchanged)
+// Rune Logic
 function initRunes() {
     const runeContainer = document.getElementById('rune-cards');
     const runeResult = document.getElementById('rune-result');
@@ -318,6 +346,7 @@ function initScrollAnimations() {
 
 // Initialize Functions Based on Page
 document.addEventListener('DOMContentLoaded', () => {
+    initNavToggle();
     if (document.getElementById('spin-button')) {
         initTarot();
     }

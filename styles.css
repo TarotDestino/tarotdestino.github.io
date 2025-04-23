@@ -1,466 +1,509 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
+    margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #1a0b2e, #2e1a47);
-    color: #f0e6d2;
-    line-height: 1.8;
-    font-size: 16px;
+    background: #0a0318;
+    color: #fff;
     position: relative;
     overflow-x: hidden;
 }
+
 .stars {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: url('images/stars-bg.jpg') repeat;
     z-index: -1;
-    pointer-events: none;
+    opacity: 0.5;
 }
-.stars::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: #f0e6d2;
-    box-shadow: 100px 200px, 300px 400px, 500px 100px, 700px 600px, 900px 300px, 200px 500px, 400px 700px, 600px 200px, 800px 400px, 1000px 600px;
-    animation: twinkle 5s infinite;
-}
-@keyframes twinkle {
-    0%, 100% { opacity: 0.2; }
-    50% { opacity: 0.8; }
-}
+
 header {
-    background: #0a0318;
-    padding: 30px;
     text-align: center;
-    border-bottom: 5px solid #d4a017;
-    animation: fadeIn 1s ease-in;
+    padding: 20px 0;
+    background: rgba(10, 3, 24, 0.8);
 }
+
 header h1 {
     font-family: 'Cinzel', serif;
-    font-size: 3.2em;
+    font-size: 2.5em;
+    margin: 0;
     color: #d4a017;
-    text-shadow: 0 0 15px rgba(212, 160, 23, 0.7);
 }
-nav {
-    background: #2e1a47;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-nav a {
-    color: #f0e6d2;
-    text-decoration: none;
-    margin: 0 30px;
-    font-family: 'Cinzel', serif;
-    font-size: 1.4em;
-    transition: color 0.3s, text-shadow 0.3s;
-}
-nav a:hover {
-    color: #d4a017;
-    text-shadow: 0 0 10px rgba(212, 160, 23, 0.8);
-}
+
 .container {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 50px;
-    background: rgba(10, 3, 24, 0.8);
-    border-radius: 25px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    padding: 20px;
 }
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: url('https://images.unsplash.com/photo-1517502166878-35c93a0072f0') no-repeat center/cover;
-    border-radius: 25px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
-}
-.about-bg {
-    background: url('https://images.unsplash.com/photo-1518709268805-4e9042af8f98') no-repeat center/cover;
-}
-.services-bg {
-    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
-}
-.tarot-bg {
-    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
-}
-.runes-bg {
-    background: url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b') no-repeat center/cover;
-}
-.blog-bg {
-    background: url('https://images.unsplash.com/photo-1529429617124-95b109e86bb8') no-repeat center/cover;
-}
-.testimonials-bg {
-    background: url('https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45') no-repeat center/cover;
-}
-.contact-bg {
-    background: url('https://images.unsplash.com/photo-1518098268026-4e266b1b6d04') no-repeat center/cover;
-}
-.hero h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 3em;
-    color: #f0e6d2;
-    margin-bottom: 30px;
-    text-shadow: 0 0 12px rgba(212, 160, 23, 0.9);
-}
-.hero p {
-    font-size: 1.3em;
-    margin-bottom: 40px;
-}
-.btn {
-    background: #d4a017;
-    color: #0a0318;
-    padding: 16px 35px;
-    text-decoration: none;
-    border-radius: 12px;
-    font-family: 'Cinzel', serif;
-    font-size: 1.3em;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-    display: inline-block;
-    margin: 25px 0;
-    animation: pulse 2s infinite;
-}
-.btn:hover {
-    background: #f0e6d2;
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(212, 160, 23, 0.8);
-}
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
+
 .section {
-    margin: 80px 0;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s, transform 0.8s;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(46, 26, 71, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-.section.animate-section {
+
+.animate-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate-section.visible {
     opacity: 1;
     transform: translateY(0);
 }
-.section h2 {
+
+.btn {
+    background: #d4a017;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     font-family: 'Cinzel', serif;
-    font-size: 2.5em;
-    color: #d4a017;
-    margin-bottom: 35px;
-    text-align: center;
+    font-size: 1em;
+    transition: background 0.3s;
 }
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
+
+.btn:hover {
+    background: #b88e14;
 }
-.card {
-    background: #2e1a47;
-    padding: 35px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
+
+/* Hamburger Menu Styles */
+.nav-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
 }
-.card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 8px 25px rgba(212, 160, 23, 0.3);
+
+.nav-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #d4a017;
+    margin: 5px 0;
+    transition: all 0.3s;
 }
-.card img {
-    max-width: 100%;
-    border-radius: 12px;
-    margin-bottom: 25px;
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
 }
-.card h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.7em;
-    margin-bottom: 20px;
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
 }
-.card p {
-    margin-bottom: 20px;
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
-.card .price {
-    font-size: 1.3em;
-    color: #d4a017;
-    font-weight: bold;
-    margin-bottom: 20px;
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background: rgba(10, 3, 24, 0.8);
 }
-.blog-posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
-    margin-bottom: 50px;
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
 }
-.blog-card {
-    background: #2e1a47;
-    padding: 35px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.blog-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 8px 25px rgba(212, 160, 23, 0.3);
-}
-.blog-card img {
-    max-width: 100%;
-    border-radius: 12px;
-    margin-bottom: 25px;
-}
-.blog-card h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.7em;
-    margin-bottom: 20px;
-}
-.blog-card p {
-    margin-bottom: 20px;
-}
-.recent-posts {
-    background: #2e1a47;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    margin-top: 50px;
-}
-.recent-posts h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.7em;
-    color: #d4a017;
-    margin-bottom: 20px;
-}
-.recent-posts ul {
-    list-style: none;
-}
-.recent-posts li {
-    margin-bottom: 15px;
-}
-.recent-posts a {
-    color: #f0e6d2;
+
+nav a {
+    color: #fff;
     text-decoration: none;
+    font-family: 'Cinzel', serif;
     font-size: 1.2em;
     transition: color 0.3s;
 }
-.recent-posts a:hover {
+
+nav a:hover {
     color: #d4a017;
 }
-.form-group {
-    margin: 30px 0;
-}
-.form-group label {
-    display: block;
-    font-size: 1.3em;
-    margin-bottom: 12px;
-    color: #d4a017;
-}
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 16px;
-    border: 2px solid #d4a017;
-    border-radius: 12px;
-    background: #0a0318;
-    color: #f0e6d2;
-    font-size: 1.2em;
-}
-.chat-box {
-    position: fixed;
-    bottom: 120px;
-    right: 40px;
-    background: #2e1a47;
-    padding: 30px;
-    border-radius: 20px;
-    width: 380px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    display: none;
-}
-.chat-box.active {
-    display: block;
-}
-.chat-box textarea {
-    width: 100%;
-    height: 140px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-}
-#toggle-chat {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-}
-.tarot-container, .rune-container {
+
+/* Slot Machine Styles */
+.slot-machine {
     display: flex;
     justify-content: center;
-    gap: 35px;
+    gap: 15px;
+    margin: 40px 0;
+    background: #2e1a47;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     flex-wrap: wrap;
-    margin: 50px 0;
 }
-.tarot-card {
-    width: 180px;
-    height: 300px;
-    perspective: 1000px;
+
+.slot-window {
+    width: 150px;
+    height: 250px;
+    background: #0a0318;
+    border: 3px solid #d4a017;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slot-card {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.1s;
+}
+
+.slot-card.spinning {
+    animation: spin 0.1s infinite;
+}
+
+@keyframes spin {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+#spin-button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 40px;
+    font-size: 1.5em;
+}
+
+/* Modal Styles */
+#tarot-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #2e1a47;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #d4a017;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
     cursor: pointer;
-    opacity: 0;
-    animation: fadeInCard 0.5s ease-in forwards;
-    animation-delay: calc(0.1s * var(--index));
+    font-family: 'Cinzel', serif;
 }
+
+.modal-close:hover {
+    background: #b88e14;
+}
+
+.modal-card {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    background: #0a0318;
+    padding: 15px;
+    border: 2px solid #d4a017;
+    border-radius: 10px;
+}
+
+.modal-card img {
+    width: 100px;
+    height: 150px;
+    object-fit: contain;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.modal-card-text h3 {
+    margin: 0 0 10px;
+    color: #d4a017;
+    font-family: 'Cinzel', serif;
+}
+
+.modal-card-text p {
+    margin: 0;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Rune Styles */
 .rune-card {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     perspective: 1000px;
     cursor: pointer;
-    opacity: 0;
-    animation: fadeInCard 0.5s ease-in forwards;
-    animation-delay: calc(0.1s * var(--index));
+    animation: float 3s infinite ease-in-out;
+    animation-delay: calc(var(--index) * 0.2s);
 }
-@keyframes fadeInCard {
-    to { opacity: 1; }
-}
-.tarot-card-inner, .rune-card-inner {
+
+.rune-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.6s;
     transform-style: preserve-3d;
-    border-radius: 12px;
 }
-.tarot-card.flipped .tarot-card-inner, .rune-card.flipped .rune-card-inner {
+
+.rune-card.flipped .rune-card-inner {
     transform: rotateY(180deg);
 }
-.tarot-card .card-front, .tarot-card .card-back, .rune-card .card-front, .rune-card .card-back {
+
+.card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
 }
-.tarot-card .card-front {
-    background: url('images/cards/reverse_card.jpg') no-repeat center/contain;
-    background-color: #0a0318;
+
+.card-front {
+    background: #2e1a47 url('images/runes/reverse_rune.png') center/cover;
 }
-.tarot-card .card-back {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #0a0318;
+
+.card-back {
+    background-size: cover;
     transform: rotateY(180deg);
 }
-.rune-card .card-front {
-    background: url('images/runes/reverse_rune.png') no-repeat center/contain;
-    background-color: #0a0318;
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
-.rune-card .card-back {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #0a0318;
-    transform: rotateY(180deg);
-}
-.tarot-card:hover .tarot-card-inner, .rune-card:hover .rune-card-inner {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(212, 160, 23, 0.5);
-}
-#tarot-result div, #rune-result div {
+
+/* Blog and Testimonials Styles */
+.blog-post, .testimonial {
     background: #2e1a47;
-    padding: 25px;
-    border-radius: 15px;
-    margin: 25px 0;
-    text-align: center;
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideInResult 0.5s ease-in forwards;
-}
-@keyframes slideInResult {
-    to { opacity: 1; transform: translateX(0); }
-}
-#tarot-result img, #rune-result img {
-    max-width: 140px;
-    border-radius: 12px;
+    padding: 20px;
     margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-.testimonials {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
+
+.blog-post img, .testimonial img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
-.testimonial-card {
-    background: #2e1a47;
-    padding: 35px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    position: relative;
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-.testimonial-card:hover .stars {
-    opacity: 1;
-}
-.stars {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    font-size: 1.6em;
-    color: #d4a017;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-footer {
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #d4a017;
+    border-radius: 5px;
     background: #0a0318;
-    padding: 35px;
-    text-align: center;
-    border-top: 5px solid #d4a017;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
+
+textarea {
+    resize: vertical;
+}
+
+/* Chat Styles */
+.chat-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: #2e1a47;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+
+.chat-box.active {
+    display: block;
+}
+
+#toggle-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#chat-message {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(10, 3, 24, 0.8);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
 footer a {
     color: #d4a017;
-    margin: 0 25px;
     text-decoration: none;
 }
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 footer img {
     vertical-align: middle;
+    margin: 0 10px;
 }
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
+    header {
+        padding-top: 60px;
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background: #0a0318;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: transform 0.3s;
+    }
+    .nav-menu.active {
+        display: flex;
+        transform: translateX(0);
     }
     nav a {
-        display: block;
-        margin: 25px 0;
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+    .container {
+        padding: 15px;
+    }
+    .section {
+        padding: 15px;
+    }
+    .slot-machine {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .slot-window {
+        width: 100px;
+        height: 167px;
+    }
+    #spin-button {
+        padding: 10px 30px;
         font-size: 1.2em;
     }
-    .hero h2 {
-        font-size: 2.2em;
+    .modal-content {
+        width: 95%;
+        padding: 20px;
     }
-    .hero p {
+    .modal-card img {
+        width: 60px;
+        height: 90px;
+        margin-right: 15px;
+    }
+    .modal-card-text h3 {
         font-size: 1.1em;
     }
-    .section h2 {
-        font-size: 2em;
-    }
-    .tarot-card {
-        width: 140px;
-        height: 240px;
+    .modal-card-text p {
+        font-size: 0.9em;
     }
     .rune-card {
         width: 100px;
         height: 100px;
     }
-    .card, .testimonial-card, .blog-card {
-        width: 100%;
-    }
-    .container {
-        padding: 25px;
+    .blog-post, .testimonial {
+        padding: 15px;
     }
     .chat-box {
-        width: 300px;
-        bottom: 100px;
-        right: 20px;
+        width: 90%;
+        right: 5%;
     }
-    .recent-posts {
-        margin-top: 25px;
+    #toggle-chat {
+        padding: 8px 15px;
+    }
+    footer p {
+        font-size: 0.9em;
+    }
+    footer img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .slot-window {
+        width: 80px;
+        height: 133px;
+    }
+    #spin-button {
+        font-size: 1em;
+    }
+    .modal-card img {
+        width: 50px;
+        height: 75px;
+    }
+    .modal-card-text h3 {
+        font-size: 1em;
+    }
+    .modal-card-text p {
+        font-size: 0.8em;
+    }
+    .rune-card {
+        width: 80px;
+        height: 80px;
+    }
+    input, textarea {
+        font-size: 0.9em;
+    }
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
     }
 }

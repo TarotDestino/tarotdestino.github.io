@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explora artículos sobre tarot, runas, astrología y esoterismo en el blog de Tarot Celestial.">
-    <meta name="keywords" content="tarot, runas, astrología, esoterismo, rituales, luna nueva">
+    <meta name="description" content="Lee los últimos artículos sobre tarot, runas y espiritualidad en el blog de Tarot Celestial.">
+    <meta name="keywords" content="blog tarot, espiritualidad, runas">
     <meta name="author" content="Tarot Celestial">
     <title>Tarot Celestial - Blog</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -14,44 +14,29 @@
     <div class="stars"></div>
     <header>
         <h1>Tarot Celestial</h1>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="about.html">Sobre Mí</a>
-        <a href="services.html">Servicios</a>
-        <a href="tarot.html">Tirada de Tarot</a>
-        <a href="runes.html">Tirada de Runas</a>
-        <a href="blog.html">Blog</a>
-        <a href="testimonials.html">Testimonios</a>
-        <a href="contact.html">Contacto</a>
+        <div class="nav-menu">
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Sobre Mí</a>
+            <a href="services.html">Servicios</a>
+            <a href="tarot.html">Tirada de Tarot</a>
+            <a href="runes.html">Tirada de Runas</a>
+            <a href="blog.html">Blog</a>
+            <a href="testimonials.html">Testimonios</a>
+            <a href="contact.html">Contacto</a>
+        </div>
     </nav>
-    <div class="container blog-bg">
+    <div class="container">
         <section class="section animate-section">
-            <h2>Blog Esotérico</h2>
-            <p>Explora artículos sobre tarot, runas, astrología y prácticas espirituales.</p>
-            <div class="blog-posts">
-                <div class="blog-card">
-                    <img src="images/blog/runas.jpg" alt="Runas">
-                    <h3>El Poder de las Runas</h3>
-                    <p>Descubre los significados y la magia de las runas Elder Futhark.</p>
-                    <a href="#runa-post" class="btn">Leer Más</a>
-                </div>
-                <div class="blog-card">
-                    <img src="images/blog/luna_nueva.jpg" alt="Luna Nueva">
-                    <h3>Guía para la Luna Nueva</h3>
-                    <p>Rituales y meditaciones para aprovechar la energía lunar.</p>
-                    <a href="#luna-post" class="btn">Leer Más</a>
-                </div>
-            </div>
-            <aside class="recent-posts">
-                <h3>Artículos Recientes</h3>
-                <ul>
-                    <li><a href="#runa-post">El Poder de las Runas</a></li>
-                    <li><a href="#luna-post">Guía para la Luna Nueva</a></li>
-                    <li><a href="#tarot-post">Cómo Leer el Tarot de Marsella</a></li>
-                    <li><a href="#cristales-post">Propiedades de los Cristales</a></li>
-                </ul>
-            </aside>
+            <h2>Blog</h2>
+            <p>Explora nuestros artículos sobre tarot, runas y espiritualidad.</p>
+            <div id="blog-posts"></div>
         </section>
     </div>
 
@@ -72,6 +57,7 @@
         </p>
     </footer>
 
+    <script src="script.js"></script>
     <script src="blog.js"></script>
 </body>
 </html>

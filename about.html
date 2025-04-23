@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conoce a la tarotista de Tarot Celestial, experta en Tarot de Marsella, runas Elder Futhark y astrología.">
-    <meta name="keywords" content="tarotista, runología, astrología, tarot marsella, elder futhark">
+    <meta name="description" content="Conoce a la tarotista detrás de Tarot Celestial y su pasión por la espiritualidad.">
+    <meta name="keywords" content="tarotista, espiritualidad, tarot celestial">
     <meta name="author" content="Tarot Celestial">
-    <title>Sobre Mí - Tarot Celestial</title>
+    <title>Tarot Celestial - Sobre Mí</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,36 +14,39 @@
     <div class="stars"></div>
     <header>
         <h1>Tarot Celestial</h1>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="about.html">Sobre Mí</a>
-        <a href="services.html">Servicios</a>
-        <a href="tarot.html">Tirada de Tarot</a>
-        <a href="runes.html">Tirada de Runas</a>
-        <a href="blog.html">Blog</a>
-        <a href="testimonials.html">Testimonios</a>
-        <a href="contact.html">Contacto</a>
+        <div class="nav-menu">
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Sobre Mí</a>
+            <a href="services.html">Servicios</a>
+            <a href="tarot.html">Tirada de Tarot</a>
+            <a href="runes.html">Tirada de Runas</a>
+            <a href="blog.html">Blog</a>
+            <a href="testimonials.html">Testimonios</a>
+            <a href="contact.html">Contacto</a>
+        </div>
     </nav>
-    <div class="container" style="background-image: url('https://images.unsplash.com/photo-1538378918348-6a4f4e6a64f5');">
+    <div class="container">
         <section class="section animate-section">
             <h2>Sobre Mí</h2>
-            <p>Soy una tarotista y esoterista certificada con 15 años de experiencia, especializada en Tarot de Marsella, runas Elder Futhark y astrología. Mi misión es guiarte con claridad y empatía en tu camino espiritual.</p>
-            <p><strong>Certificados:</strong></p>
-            <ul>
-                <li>Diplomada en Tarot Terapéutico (Escuela Esotérica de Barcelona)</li>
-                <li>Runología (Academia Nórdica de Estudios Místicos)</li>
-                <li>Especialización en Astrología Natal (Instituto Celestial)</li>
-            </ul>
-            <p>Con un enfoque intuitivo y profesional, combino herramientas ancestrales con un toque moderno para ofrecerte lecturas profundas y transformadoras.</p>
+            <p>Soy un tarotista apasionada con años de experiencia guiando a las personas a través del tarot y las runas. Mi misión es ayudarte a encontrar claridad y propósito en tu camino espiritual.</p>
+            <img src="https://via.placeholder.com/300x300" alt="Tarotista" style="max-width: 100%; border-radius: 10px;">
         </section>
     </div>
+
     <div id="chat-box" class="chat-box">
         <h3>Chat en Vivo</h3>
         <textarea id="chat-message" placeholder="Escribe tu mensaje..."></textarea>
         <button id="send-chat" class="btn">Enviar</button>
     </div>
     <button id="toggle-chat" class="btn">Abrir Chat</button>
+
     <footer>
         <p>© 2025 Tarot Celestial. Todos los derechos reservados.</p>
         <p><a href="contact.html#privacy">Política de Privacidad</a> | <a href="contact.html#terms">Términos y Condiciones</a></p>
@@ -53,6 +56,7 @@
             <a href="https://youtube.com/@tarotcelestial"><img src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png" alt="YouTube"></a>
         </p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
