@@ -145,21 +145,19 @@ function initTarot() {
 
     function spinSlot(slot, duration, finalCard) {
         let startTime = null;
-        const spinInterval = 100; // Change image every 100ms
+        const spinInterval = 100;
         const shuffledCards = shuffle([...tarotCards]);
 
         function animate(timestamp) {
             if (!startTime) startTime = timestamp;
             const elapsed = timestamp - startTime;
 
-            // Update card image to create spinning effect
             if (elapsed < duration) {
                 const randomCard = shuffledCards[Math.floor(Math.random() * shuffledCards.length)];
                 slot.style.backgroundImage = `url('${randomCard.image}')`;
                 slot.classList.add('spinning');
                 requestAnimationFrame(animate);
             } else {
-                // Stop spinning, show final card
                 slot.style.backgroundImage = `url('${finalCard.image}')`;
                 slot.classList.remove('spinning');
             }
@@ -185,33 +183,34 @@ function initTarot() {
         tarotModal.style.display = 'flex';
     }
 
-    spinButton.addEventListener('click', () => {
-        if (isSpinning) return;
-        isSpinning = true;
-        spinButton.disabled = true;
-        tarotResult.innerHTML = '';
+    if (spinButton) {
+        spinButton.addEventListener('click', () => {
+            if (isSpinning) return;
+            isSpinning = true;
+            spinButton.disabled = true;
+            tarotResult.innerHTML = '';
 
-        // Select 5 random cards
-        const selectedCards = shuffle([...tarotCards]).slice(0, 5);
+            const selectedCards = shuffle([...tarotCards]).slice(0, 5);
 
-        // Spin each slot with staggered stop times
-        spinSlot(slots[0], 1000, selectedCards[0]); // Stop after 1s
-        spinSlot(slots[1], 1200, selectedCards[1]); // Stop after 1.2s
-        spinSlot(slots[2], 1400, selectedCards[2]); // Stop after 1.4s
-        spinSlot(slots[3], 1600, selectedCards[3]); // Stop after 1.6s
-        spinSlot(slots[4], 1800, selectedCards[4]); // Stop after 1.8s
+            spinSlot(slots[0], 1000, selectedCards[0]);
+            spinSlot(slots[1], 1200, selectedCards[1]);
+            spinSlot(slots[2], 1400, selectedCards[2]);
+            spinSlot(slots[3], 1600, selectedCards[3]);
+            spinSlot(slots[4], 1800, selectedCards[4]);
 
-        // Display results in modal after the last slot stops
-        setTimeout(() => {
-            displayTarotResults(selectedCards);
-            isSpinning = false;
-            spinButton.disabled = false;
-        }, 1800);
-    });
+            setTimeout(() => {
+                displayTarotResults(selectedCards);
+                isSpinning = false;
+                spinButton.disabled = false;
+            }, 1800);
+        });
+    }
 
-    modalClose.addEventListener('click', () => {
-        tarotModal.style.display = 'none';
-    });
+    if (modalClose) {
+        modalClose.addEventListener('click', () => {
+            tarotModal.style.display = 'none';
+        });
+    }
 }
 
 // Rune Logic
@@ -262,33 +261,40 @@ function initRunes() {
         runeResult.innerHTML = '';
         selectedRunes.forEach((rune, index) => {
             const resultDiv = document.createElement('div');
+            resultDiv.className = 'modal-card';
             resultDiv.innerHTML = `
-                <h3>Runa ${index + 1}: ${rune.name} (${rune.symbol})</h3>
                 <img src="${rune.image}" alt="${rune.name}">
-                <p><strong>Significado:</strong> ${rune.meaning}</p>
-                <p><strong>Predicción:</strong> ${rune.prediction}</p>
+                <div class="modal-card-text">
+                    <h3>Runa ${index + 1}: ${rune.name} (${rune.symbol})</h3>
+                    <p><strong>Significado:</strong> ${rune.meaning}</p>
+                    <p><strong>Predicción:</strong> ${rune.prediction}</p>
+                </div>
             `;
             runeResult.appendChild(resultDiv);
         });
     }
 
-    resetButton.addEventListener('click', displayRunes);
-    displayRunes();
+    if (runeContainer) {
+        displayRunes();
+    }
+
+    if (resetButton) {
+        resetButton.addEventListener('click', displayRunes);
+    }
 }
 
-// Contact Form Submission
+// Contact Form Handling
 function initContactForm() {
-    const submitButton = document.getElementById('submit-contact');
-    if (submitButton) {
-        submitButton.addEventListener('click', () => {
+    const contactForm = document.getElementById('contact-form');
+    const submitContact = document.getElementById('submit-contact');
+    if (submitContact) {
+        submitContact.addEventListener('click', () => {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             if (name && email && message) {
-                alert('Mensaje enviado correctamente.');
-                document.getElementById('name').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('message').value = '';
+                alert('¡Mensaje enviado! Pronto te responderemos.');
+                contactForm.reset();
             } else {
                 alert('Por favor, completa todos los campos.');
             }
@@ -296,15 +302,16 @@ function initContactForm() {
     }
 }
 
-// Newsletter Subscription
-function initNewsletter() {
-    const submitButton = document.getElementById('submit-newsletter');
-    if (submitButton) {
-        submitButton.addEventListener('click', () => {
+// Newsletter Form Handling
+function initNewsletterForm() {
+    const newsletterForm = document.getElementById('newsletter-form');
+    const submitNewsletter = document.getElementById('submit-newsletter');
+    if (submitNewsletter) {
+        submitNewsletter.addEventListener('click', () => {
             const email = document.getElementById('newsletter-email').value;
             if (email) {
-                alert('¡Suscrito correctamente a la newsletter!');
-                document.getElementById('newsletter-email').value = '';
+                alert('¡Suscrito! Recibirás nuestras actualizaciones.');
+                newsletterForm.reset();
             } else {
                 alert('Por favor, ingresa un email válido.');
             }
@@ -317,44 +324,49 @@ function initChat() {
     const chatBox = document.getElementById('chat-box');
     const toggleChat = document.getElementById('toggle-chat');
     const sendChat = document.getElementById('send-chat');
-    if (chatBox && toggleChat && sendChat) {
+    const chatMessage = document.getElementById('chat-message');
+
+    if (toggleChat) {
         toggleChat.addEventListener('click', () => {
             chatBox.classList.toggle('active');
+            toggleChat.textContent = chatBox.classList.contains('active') ? 'Cerrar Chat' : 'Abrir Chat';
         });
+    }
+
+    if (sendChat) {
         sendChat.addEventListener('click', () => {
-            const message = document.getElementById('chat-message').value;
+            const message = chatMessage.value.trim();
             if (message) {
-                alert('Mensaje enviado: ' + message);
-                document.getElementById('chat-message').value = '';
+                alert('Mensaje enviado al equipo de soporte: ' + message);
+                chatMessage.value = '';
+            } else {
+                alert('Por favor, escribe un mensaje.');
             }
         });
     }
 }
 
-// Scroll Animation for Sections
-function initScrollAnimations() {
+// Section Animations
+function initAnimations() {
     const sections = document.querySelectorAll('.animate-section');
-    const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-section');
+                entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
+
     sections.forEach(section => observer.observe(section));
 }
 
-// Initialize Functions Based on Page
+// Initialize All
 document.addEventListener('DOMContentLoaded', () => {
     initNavToggle();
-    if (document.getElementById('spin-button')) {
-        initTarot();
-    }
-    if (document.getElementById('rune-cards')) {
-        initRunes();
-    }
+    initTarot();
+    initRunes();
     initContactForm();
-    initNewsletter();
+    initNewsletterForm();
     initChat();
-    initScrollAnimations();
+    initAnimations();
 });
