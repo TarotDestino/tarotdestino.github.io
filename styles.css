@@ -178,13 +178,15 @@ nav a:hover {
 .slot-machine {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
     gap: 10px;
-    margin: 40px 0;
+    margin: 40px auto;
     background: #2e1a47;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     justify-items: center;
+    max-width: 600px;
 }
 
 .slot-window {
@@ -200,9 +202,29 @@ nav a:hover {
     justify-content: center;
 }
 
-.slot-machine .slot-window:nth-child(4),
+.slot-machine .slot-window:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.slot-machine .slot-window:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.slot-machine .slot-window:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.slot-machine .slot-window:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
 .slot-machine .slot-window:nth-child(5) {
-    grid-column: span 1;
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .slot-card {
@@ -508,17 +530,34 @@ footer img {
     }
     .slot-machine {
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
         gap: 8px;
+        max-width: 300px;
+        padding: 15px;
     }
     .slot-window {
         width: 80px;
         height: 133px;
     }
+    .slot-machine .slot-window:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .slot-machine .slot-window:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .slot-machine .slot-window:nth-child(3) {
+        grid-column: 3;
+        grid-row: 1;
+    }
     .slot-machine .slot-window:nth-child(4) {
         grid-column: 1;
+        grid-row: 2;
     }
     .slot-machine .slot-window:nth-child(5) {
         grid-column: 2;
+        grid-row: 2;
     }
     #spin-button {
         padding: 10px 30px;
@@ -555,8 +594,8 @@ footer img {
     .rune-result {
         grid-template-columns: 1fr;
         gap: 8px;
-    }
-    .blog-post, .testimonialagni {
+    merged
+    .blog-post, .testimonial {
         padding: 15px;
     }
     .chat-box {
@@ -578,42 +617,40 @@ footer img {
     header h1 {
         font-size: 2em;
     }
-    .cards {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    .card {
-        padding: 10px;
-        min-height: 160px;
-    }
-    .card h3 {
-        font-size: 1.2em;
-    }
-    .card p {
-        font-size: 0.8em;
-    }
-    .card .price {
-        font-size: 1em;
-    }
     .slot-machine {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
         gap: 6px;
+        max-width: 200px;
+        padding: 10px;
     }
     .slot-window {
         width: 60px;
         height: 100px;
     }
+    .slot-machine .slot-window:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .slot-machine .slot-window:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
     .slot-machine .slot-window:nth-child(3) {
         grid-column: 1;
+        grid-row: 2;
     }
     .slot-machine .slot-window:nth-child(4) {
         grid-column: 2;
+        grid-row: 2;
     }
     .slot-machine .slot-window:nth-child(5) {
         grid-column: 1 / span 2;
+        grid-row: 3;
     }
     #spin-button {
         font-size: 1em;
+        padding: 8px 20px;
     }
     .modal-card img {
         width: 40px;
@@ -635,6 +672,23 @@ footer img {
     }
     .rune-result {
         grid-template-columns: 1fr;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .card {
+        padding: 10px;
+        min-height: 160px;
+    }
+    .card h3 {
+        font-size: 1.2em;
+    }
+    .card p {
+        font-size: 0.8em;
+    }
+    .card .price {
+        font-size: 1em;
     }
     input, textarea {
         font-size: 0.9em;
