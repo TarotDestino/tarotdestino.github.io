@@ -12,7 +12,12 @@ function sendContactForm() {
 }
 
 // Event listener para el botón de enviar
-document.getElementById('submit-contact').addEventListener('click', sendContactForm);
+const submitContactBtn = document.getElementById('submit-contact');
+if(submitContactBtn) {
+  submitContactBtn.addEventListener('click', sendContactForm);
+} else {
+  console.error('No se encontró el elemento submit-contact');
+}
 
 const tarotCards = [
     { name: "El Loco", meaning: "Nuevos comienzos, espontaneidad, pero cuidado con la impulsividad.", image: "images/cards/card_0.png" },
