@@ -1,4 +1,24 @@
 // Array of 78 Marseille Tarot Cards with Brief Meanings
+// Función para enviar el formulario de contacto
+function sendContactForm() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  
+  const subject = `Consulta de ${name}`;
+  const body = `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`;
+  
+  window.location.href = `mailto:tarotdestinoangeles@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+// Event listener para el botón de enviar
+const submitContactBtn = document.getElementById('submit-contact');
+if(submitContactBtn) {
+  submitContactBtn.addEventListener('click', sendContactForm);
+} else {
+  console.error('No se encontró el elemento submit-contact');
+}
+
 const tarotCards = [
     { name: "El Loco", meaning: "Nuevos comienzos, espontaneidad, pero cuidado con la impulsividad.", image: "images/cards/card_0.png" },
     { name: "El Mago", meaning: "Habilidad, creatividad y manifestación de tus deseos.", image: "images/cards/card_1.png" },
